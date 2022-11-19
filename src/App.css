@@ -967,7 +967,7 @@ background-position: bottom !important;
   > div
   > div
   > div:nth-child(4){
-    border: 5px solid yellow;
+    /* border: 5px solid yellow; */
     height: 100px;
     width: 100%;
   }
