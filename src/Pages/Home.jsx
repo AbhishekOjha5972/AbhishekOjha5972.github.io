@@ -408,17 +408,25 @@ const Home = () => {
             />
           </Box>
           <Box className="home-github_child_two">
-            <Box>
+            <Box data-aos="fade-right">
               <Image
               align="center"
               src="https://github-readme-streak-stats.herokuapp.com?user=AbhishekOjha5972&theme=radical&hide_border=true" />
             </Box>
-            <Box>
+            <Box data-aos="fade-left">
               <Image
                 align="center"
                 src="https://github-readme-stats.vercel.app/api?username=AbhishekOjha5972&theme=radical&show_icons=true&hide_border=true&bg_color=#674d89"
               />
             </Box>
+            <Box data-aos="zoom-out">
+              <Image 
+              height="100%"
+              align="center"
+              src="https://github-readme-stats.vercel.app/api/top-langs/?username=AbhishekOjha5972&layout=compact&theme=radical&hide_border=true"
+              />
+            </Box>
+            
           </Box>
         </Box>
         {/* Contect Me Section  */}

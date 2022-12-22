@@ -1377,17 +1377,11 @@ border-radius: 50%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  height: 200px;
+  gap: 10px;
 
 }
-.home-github_child_two > div{
-  height: 100%;
-  /* border: 3px solid blue; */
-}
-.home-github_child_two > div > img{
-  height: 100%;
-  /* border: 3px solid blue; */
-}
+
+
 
 
 
