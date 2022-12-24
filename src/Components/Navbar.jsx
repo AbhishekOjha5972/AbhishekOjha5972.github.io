@@ -22,8 +22,7 @@ import resume from "../project_images/Abhishek_Ojha_Resume.pdf";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [trg,setTrg] = useState(false)
-
+  const [trg, setTrg] = useState(false);
 
   // const nextPage = () =>{
   //   window.open(`${resume}`)
@@ -59,15 +58,7 @@ const Navbar = () => {
           <Box>
             <Link
               href="https://drive.google.com/file/d/1zz2eOWRBcKxcl-jF0ZYMlvfUlBw9cxkF/view?usp=share_link"
-              // href={resume}
-              // onClick={nextPage}
               target="_blank"
-              
-              // 
-              
-              // download="https://drive.google.com/u/0/uc?id=1zz2eOWRBcKxcl-jF0ZYMlvfUlBw9cxkF&export=download"
-              // https://drive.google.com/u/0/uc?id=1zz2eOWRBcKxcl-jF0ZYMlvfUlBw9cxkF&export=download
-              // donwload
             >
               Resume
             </Link>
