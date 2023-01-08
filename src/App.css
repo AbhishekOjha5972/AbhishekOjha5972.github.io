@@ -1,34 +1,337 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap'); */
+* {
+  scroll-behavior: smooth;
+}
+body {
+  position: relative;
+}
 .App {
+  background-color: rgb(29, 29, 29);
+}
+/* Navbar Css Area  */
+.navbar_css {
+  /* border: 1px solid yellow; */
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: rgb(43, 42, 42);
+  z-index: 10;
+}
+.navbar_css > div {
+  height: 70px;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+.navbar_css > div > div:nth-child(1) {
+  /* border: 1px solid black; */
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 6px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.navbar_css > div > div:nth-child(1) > img {
+  animation: 2s spinBulb infinite;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.navbar_css > div > div:nth-child(1) > img:hover {
+  border: 1px solid linear-gradient(180deg, red, yellow);
+  cursor: pointer;
+}
+
+.navbar_css > div > div:nth-child(2) {
+  /* border: 2px solid black; */
+  justify-content: space-between;
+  border-radius: 5px;
+  transition: all 1s ease-in-out;
+}
+.navbar_css > div > div:nth-child(2) > div > a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar_css > div > div:nth-child(2) > div {
+  padding: 5px 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: rgb(43, 42, 42);
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 5px;
+}
+.navbar_css > div > div:nth-child(2) > div:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(1px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 5px;
+}
+.navbar_css > div > div:nth-child(2) > div:active {
+  color: #000;
+}
+.navbar_css > div > div:nth-child(2) > div:active:after {
+  background: transparent;
+}
+.navbar_css > div > div:nth-child(2) > div:hover:before {
+  opacity: 1;
+}
+
+.navbar_css > div > div:nth-child(2) > div:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(43, 42, 42);
+  left: 0;
+  top: 0;
+  border-radius: 5px;
+}
+
+.drawer {
+  height: fit-content;
+  background-color: rgb(29, 29, 29) !important;
+  width: fit-content !important ;
+  color: white !important;
+  border-radius: 0 0 0 10px;
+}
+
+.drawer > button {
+  top: 25px;
+}
+.drawer > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 70px;
+  margin-top: 50px;
+  width: 150px;
+}
+
+/* Home Css Area  */
+.home_css {
+  /* border: 5px solid blue; */
+  overflow-x: hidden;
+  max-width: 95%;
+  margin: auto;
+  height: 6000px;
+  position: relative;
+}
+.home_css > div:nth-child(1) {
+  display: flex;
+  /* border: 5px solid red; */
+  justify-content: space-between;
+  height: 90vh;
+}
+
+.home_css > div:nth-child(1) > div:nth-child(1) {
+  width: 50%;
+  /* border: 1px solid yellow; */
+  display: flex;
+  align-items: center;
+}
+
+.home_css > div:nth-child(1) > div:nth-child(2) {
+  width: 50%;
+  /* border: 1px solid yellow; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.home_css > div:nth-child(1) > div:nth-child(2) > div:first-child {
+  display: flex;
+  gap: 10px;
+  font-size: 35px;
+}
+.home_css
+  > div:nth-child(1)
+  > div:nth-child(2)
+  > div:first-child
+  > p:first-child {
+  font-weight: 600;
+  color: rgb(206, 212, 226);
+}
+.home_css
+  > div:nth-child(1)
+  > div:nth-child(2)
+  > div:first-child
+  > p:last-child {
+  color: rgb(103, 77, 137);
+}
+
+.home_css > div:nth-child(1) > div:nth-child(2) > div:last-child {
+  color: rgb(206, 212, 226);
   text-align: center;
+  font-size: 14px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home-about_me_css {
+  /* border: 1px solid blue; */
+  height: 100vh;
+  position: relative;
+  padding: 50px 0;
+}
+.home-about_me_css > div:nth-child(1) {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 35px;
+  padding: 70px 0;
+}
+.home-about_me_css > div:nth-child(1) > p:first-child {
+  font-weight: 600;
+  color: rgb(206, 212, 226);
+}
+.home-about_me_css > div:nth-child(1) > p:last-child {
+  color: rgb(103, 77, 137);
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.home-about_me_css > div:nth-child(2) {
+  /* border: 1px solid blue; */
+  display: flex;
+}
+
+.home-about_me_css > div:nth-child(2) > div:nth-child(1) {
+  width: 50%;
+  /* border: 3px solid yellow; */
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color:rgb(149,139,128);
+  font-size:14px;
+}
+.home-about_me_css > div:nth-child(2) > div:nth-child(2) {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-about_me_css > div:nth-child(2) > div:nth-child(2) > div {
+  border-radius: 50%;
+  /* border: 1px solid blue; */
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+
+}
+
+.home-about_me_css > div:nth-child(2) > div:nth-child(2) > div > img {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  transition: all 3s ease-in-out;
+  overflow: hidden;
+}
+.home-about_me_css > div:nth-child(2) > div:nth-child(2) > div > img:hover {
+  transform: scale(1.3);
+}
+
+.home-about_me_css > div:nth-child(2) > div:nth-child(2) >p{
+  letter-spacing: 5px;
+  color:rgb(149,139,128)
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media only screen and (max-width: 765px) {
+  .home_css > div:nth-child(1) {
+    transition: all 2s ease-in-out;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-content: center;
+    justify-content: space-evenly;
+    height: 60vh;
+  }
+  .home_css > div:nth-child(1) > div:nth-child(1) {
+    width: 90%;
+  }
+  .home_css > div:nth-child(1) > div:nth-child(2) {
+    width: 90%;
+  }
+  .home_css > div:nth-child(1) > div:nth-child(2) > div:first-child {
+    font-size: 25px;
+  }
+  .home_css > div:nth-child(1) > div:nth-child(2) > div:last-child {
+    font-size: 12px;
+  }
+
+
+
+
+  .home-about_me_css > div:nth-child(2) {
+      flex-direction: column-reverse;
+     align-items: center;
+  }
+  .home-about_me_css > div:nth-child(2) > div:nth-child(2) > div {
+    width: 150px;
+    height: 150px;
+  }
+  .home-about_me_css > div:nth-child(2) > div:nth-child(2) > div > img {
+    width: 150px;
+    height: 150px;
+  }
+
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes sideBar_animation {
 }
 
-@keyframes App-logo-spin {
+@keyframes spinBulb {
   from {
     transform: rotate(0deg);
   }
