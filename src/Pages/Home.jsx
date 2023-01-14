@@ -6,6 +6,12 @@ import profile_image from "../project_images/profile.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Firebase from "../project_images/Components_for_Images/Firebase";
+import Chakra from "../project_images/Components_for_Images/Chakra";
+import ExpressJS from "../project_images/Components_for_Images/ExpressJS";
+import Typescript from "../project_images/Components_for_Images/Typescript";
+import NextJS from "../project_images/Components_for_Images/NextJS";
+import Redux from "../project_images/Components_for_Images/Redux";
 
 const Home = () => {
   useEffect(() => {
@@ -89,28 +95,29 @@ const Home = () => {
               <ul>
                 <li>
                   <a href="#">
-                    <i  class="fa brands fa-html5" aria-hidden="true"></i>
-                    <span> - Facebook</span>
+                    <i  className="fa brands fa-html5" aria-hidden="true"></i>
+                    <span> - HTML</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <i  class="fa brands fa-css3" aria-hidden="true"></i>
-                    <span> - Twitter</span>
+                    <i  className="fa brands fa-css3" aria-hidden="true"></i>
+                    <span> - CSS</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <i  aria-hidden="true">
-                      <img  src="https://img.icons8.com/ios/512/javascript-logo.png"/>
+                    <i className="fa fa-brands fa-square-js" aria-hidden="true">
                     </i>
-                    <span> - Google</span>
+                    <span> - JavaScript</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                    <span> - Instagram</span>
+                    <i className="fa" aria-hidden="true">
+                      <Chakra/>
+                    </i>
+                    <span> - Chakra UI</span>
                   </a>
                 </li>
               </ul>
@@ -120,26 +127,28 @@ const Home = () => {
                 <ul>
                   <li>
                     <a href="#">
-                      <i class="fa fa-facebook" aria-hidden="true"></i>
-                      <span> - Facebook</span>
+                      <i className="fa fa-brands fa-react" aria-hidden="true"></i>
+                      <span> - React.Js</span>
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <i class="fa fa-twitter" aria-hidden="true"></i>
-                      <span> - Twitter</span>
+                      <i className="fa fa-brands fa-node" aria-hidden="true"></i>
+                      <span> - Node.js</span>
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <i class="fa fa-google-plus" aria-hidden="true"></i>
-                      <span> - Google</span>
+                      <i className="fa brands fa-envira" aria-hidden="true"></i>
+                      <span> - MongoDB</span>
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <i class="fa fa-instagram" aria-hidden="true"></i>
-                      <span> - Instagram</span>
+                      <i className="fa" aria-hidden="true">
+                        <Firebase/>
+                      </i>
+                      <span> - Firebase</span>
                     </a>
                   </li>
                 </ul>
@@ -150,26 +159,34 @@ const Home = () => {
               <ul>
                 <li>
                   <a href="#">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                    <span> - Facebook</span>
+                    <i className="fa" aria-hidden="true">
+                      <ExpressJS/>
+                    </i>
+                    <span> - Express.Js</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                    <span> - Twitter</span>
+                    <i className="fa " aria-hidden="true">
+                      <Typescript/>
+                    </i>
+                    <span> - TypeScript</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <i class="fa fa-google-plus" aria-hidden="true"></i>
-                    <span> - Google</span>
+                    <i className="fa" aria-hidden="true">
+                      <NextJS/>
+                    </i>
+                    <span> - Next.Js</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                    <span> - Instagram</span>
+                    <i className="fa" aria-hidden="true">
+                      <Redux/>
+                    </i>
+                    <span> - Redux</span>
                   </a>
                 </li>
               </ul>

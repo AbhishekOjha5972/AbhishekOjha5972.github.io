@@ -291,6 +291,515 @@ body {
   margin-top: 10px;
 }
 
+
+
+/* HOME PAGE SKILLS SECTION  */
+
+.home-skills_container_css {
+  position: relative;
+  border: 2px solid blue;
+  height: 100vh;
+}
+.home-skills_container_css > :nth-child(1) {
+  display: flex;
+  font-size: 35px;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+}
+.home-skills_container_css > :nth-child(1) > p:first-child {
+  font-weight: 600;
+  color: rgb(206, 212, 226);
+}
+.home-skills_container_css > :nth-child(1) > p:last-child {
+  color: rgb(103, 77, 137);
+}
+
+/* HOME PAGE SKILLS SECTION 
+FIRST CHILD CSS
+*/
+.home-skills_boxes_css {
+  /* display: flex; */
+}
+.home-skills_boxes_css > div:nth-child(1) {
+  position: relative;
+  /* border: 2px solid green; */
+  width: 100%;
+}
+.home-skills_boxes_css > div:nth-child(1) > div:nth-child(1) {
+  position: relative;
+  /* border: 10px solid blue; */
+  width: 100%;
+  height: 150px;
+  /* background-color: yellow; */
+}
+.home-skills_boxes_css > div:nth-child(1) > div:nth-child(2) {
+  position: relative;
+  height: 150px;
+}
+.home-skills_boxes_css > div:nth-child(1) > div:nth-child(3) {
+  position: relative;
+  height: 150px;
+}
+
+.home-skills_boxes_css > div:nth-child(2) {
+  position: relative;
+  /* border: 2px solid blue; */
+  width: 50%;
+}
+
+/* HOME PAGE SKILLS SECTION 
+SECOND CHILD CSS
+*/
+
+.home-skills_boxes_css > div:nth-child(2) {
+  position: relative;
+  /* border: 2px solid blue; */
+  /* width: 00%; */
+  height: 400px;
+  /* background-color: pink; */
+}
+
+ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 40px;
+}
+
+ul li {
+  list-style: none;
+  margin: 0 5px;
+}
+
+ul li a .fa {
+  font-size: 40px;
+  color: #662626;
+  line-height: 80px;
+  transition: 0.5s;
+  padding-right: 14px;
+}
+
+ul li a span {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 30px;
+  color: #262626;
+  letter-spacing: 4px;
+  transition: 0.5s;
+}
+
+ul li a {
+  text-decoration: none;
+  display: absolute;
+  display: block;
+  width: 250px;
+  height: 80px;
+  background: #fff;
+  text-align: left;
+  padding-left: 10px;
+  transform: rotate(-30deg) skew(25deg) translate(0, 0);
+  transition: 0.5s;
+  box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+}
+ul li a:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  height: 100%;
+  width: 20px;
+  background: #b1b1b1;
+  transform: 0.5s;
+  transform: rotate(0deg) skewY(-45deg);
+}
+ul li a:after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+  height: 20px;
+  width: 100%;
+  background: #b1b1b1;
+  transform: 0.5s;
+  transform: rotate(0deg) skewX(-45deg);
+}
+
+ul li a:hover {
+  transform: rotate(-30deg) skew(25deg) translate(20px, -15px);
+  box-shadow: -50px 50px 50px rgba(0, 0, 0, 1);
+}
+
+ul li:hover .fa {
+  color: #fff;
+}
+
+ul li:hover span {
+  color: #fff;
+}
+
+ul li a > i > svg {
+  width: 50px;
+  height: 50px;
+  margin-top: 12px;
+}
+
+/* test css  */
+.home-skills_boxes_css > div > div:nth-child(1) ul li:hover:nth-child(1) a {
+  background: #ef6326;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(1)
+  ul
+  li:hover:nth-child(1)
+  a:before {
+  background: #aa471d;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(1)
+  ul
+  li:hover:nth-child(1)
+  a:after {
+  background: #bd5428;
+}
+
+.home-skills_boxes_css > div > div:nth-child(1) ul li:hover:nth-child(2) a {
+  background: #3597d4;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(1)
+  ul
+  li:hover:nth-child(2)
+  a:before {
+  background: #365492;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(1)
+  ul
+  li:hover:nth-child(2)
+  a:after {
+  background: #4a69ad;
+}
+
+.home-skills_boxes_css > div > div:nth-child(1) ul li:hover:nth-child(3) a {
+  background: #f1df1b;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(1)
+  ul
+  li:hover:nth-child(3)
+  a:before {
+  background: #cebf18;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(1)
+  ul
+  li:hover:nth-child(3)
+  a:after {
+  background: #f5e640;
+}
+
+.home-skills_boxes_css > div > div:nth-child(1) ul li:hover:nth-child(4) a {
+  background: #6bc8cd;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(1)
+  ul
+  li:hover:nth-child(4)
+  a:before {
+  background: #6a9c9e;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(1)
+  ul
+  li:hover:nth-child(4)
+  a:after {
+  background: #77b3b6;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(1)
+  ul
+  li:hover:nth-child(4)
+  a
+  > i
+  > svg
+  > g
+  > circle {
+  fill: white !important;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(1)
+  ul
+  li:hover:nth-child(4)
+  a
+  > i
+  > svg
+  > g
+  > path {
+  fill: #6bc8cd !important;
+}
+
+/* second child  */
+.home-skills_boxes_css > div > div:nth-child(2) ul li:hover:nth-child(1) a {
+  background: #49d4fd;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(2)
+  ul
+  li:hover:nth-child(1)
+  a:before {
+  background: #3395b3;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(2)
+  ul
+  li:hover:nth-child(1)
+  a:after {
+  background: #359dbd;
+}
+
+.home-skills_boxes_css > div > div:nth-child(2) ul li:hover:nth-child(2) a {
+  background: #8ac400;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(2)
+  ul
+  li:hover:nth-child(2)
+  a:before {
+  background: #608a00;
+}
+
+.home-skills_boxes_css
+  > div
+  > div:nth-child(2)
+  ul
+  li:hover:nth-child(2)
+  a:after {
+  background: #608a00;
+}
+
+.home-skills_boxes_css > div > div:nth-child(2) ul li:hover:nth-child(3) a {
+  background: #7dc280;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(2)
+  ul
+  li:hover:nth-child(3)
+  a:before {
+  background: #517e52;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(2)
+  ul
+  li:hover:nth-child(3)
+  a:after {
+  background: #507e52;
+}
+
+.home-skills_boxes_css > div > div:nth-child(2) ul li:hover:nth-child(4) a {
+  background: #fec828;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(2)
+  ul
+  li:hover:nth-child(4)
+  a:before {
+  background: #b9921d;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(2)
+  ul
+  li:hover:nth-child(4)
+  a:after {
+  background: #be961d;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(2)
+  ul
+  li:hover:nth-child(4)
+  a
+  > i
+  > svg
+  > path {
+  fill: white !important;
+}
+
+/* third child  */
+
+.home-skills_boxes_css > div > div:nth-child(3) ul li:hover:nth-child(1) a {
+  background: #323230;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(3)
+  ul
+  li:hover:nth-child(1)
+  a:before {
+  background: #272725;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(3)
+  ul
+  li:hover:nth-child(1)
+  a:after {
+  background: #252524;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(3)
+  ul
+  li:hover:nth-child(1)
+  a
+  > i
+  > svg {
+  fill: white !important;
+}
+
+.home-skills_boxes_css > div > div:nth-child(3) ul li:hover:nth-child(2) a {
+  background: #2774c2;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(3)
+  ul
+  li:hover:nth-child(2)
+  a:before {
+  background: #1d5791;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(3)
+  ul
+  li:hover:nth-child(2)
+  a:after {
+  background: #1c5186;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(3)
+  ul
+  li:hover:nth-child(2)
+  a
+  > i
+  > svg
+  > rect {
+  fill: white !important;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(3)
+  ul
+  li:hover:nth-child(2)
+  a
+  > i
+  > svg
+  > path {
+  fill: #1d5791 !important;
+}
+
+
+
+
+.home-skills_boxes_css > div > div:nth-child(3) ul li:hover:nth-child(3) a {
+  background: black;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(3)
+  ul
+  li:hover:nth-child(3)
+  a:before {
+  background: black;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(3)
+  ul
+  li:hover:nth-child(3)
+  a:after {
+  background: black;
+}
+
+.home-skills_boxes_css
+  > div
+  > div:nth-child(3)
+  ul
+  li:hover:nth-child(3)
+  a
+  > i
+  > svg {
+  fill: white !important;
+}
+
+
+
+.home-skills_boxes_css > div > div:nth-child(3) ul li:hover:nth-child(4) a {
+  background: #764abb ;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(3)
+  ul
+  li:hover:nth-child(4)
+  a:before {
+  background: #503380 ;
+}
+.home-skills_boxes_css
+  > div
+  > div:nth-child(3)
+  ul
+  li:hover:nth-child(4)
+  a:after {
+  background: #57378a ;
+}
+
+
+.home-skills_boxes_css
+  > div
+  > div:nth-child(3)
+  ul
+  li:hover:nth-child(4)
+  a
+  > i
+  > svg
+  > path {
+  fill: white !important;
+}
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVENESS  */
 @media only screen and (max-width: 765px) {
   .home_css > div:nth-child(1) {
     transition: all 2s ease-in-out;
@@ -363,201 +872,44 @@ body {
     /* border: 2px solid blue; */
     flex-direction: row;
   }
+
+
+
+
+  /* SKILLS SECTION RESPONSIVENESS */
+
 }
 
-/* HOME PAGE SKILLS SECTION  */
+@media only screen and (max-width: 1180px) {
+ /* SKILLS SECTION RESPONSIVENESS */
+ ul{
+  gap: 0px;
+ }
 
-.home-skills_container_css {
-  position: relative;
-  border: 2px solid blue;
-  height: 100vh;
-}
-.home-skills_container_css > :nth-child(1) {
-  display: flex;
+ ul li a {
+  width: 200px;
+  height: 60px;
+ }
+ ul li a span{
+  border: 2px solid red;
+  top:18px;
+  font-size: 14px;
+ }
+
+ ul li a .fa{
+  /* position: absolute; */
+  margin-top: -5px;
   font-size: 35px;
-  justify-content: center;
-  align-items: center;
-  padding: 80px 0;
-}
-.home-skills_container_css > :nth-child(1) > p:first-child {
-  font-weight: 600;
-  color: rgb(206, 212, 226);
-}
-.home-skills_container_css > :nth-child(1) > p:last-child {
-  color: rgb(103, 77, 137);
+ }
+ ul li a i > svg{
+  height: 40px !important;
+  width: 40px  !important;
+ }
+
 }
 
-/* HOME PAGE SKILLS SECTION 
-FIRST CHILD CSS
-*/
-.home-skills_boxes_css {
-  /* display: flex; */
-}
-.home-skills_boxes_css > div:nth-child(1) {
-  position: relative;
-  border: 2px solid green;
-  width: 100%;
-}
-.home-skills_boxes_css > div:nth-child(1) > div:nth-child(1) {
-  position: relative;
-  /* border: 10px solid blue; */
-  width: 100%;
-  height: 150px;
-  /* background-color: yellow; */
-}
-.home-skills_boxes_css > div:nth-child(1) > div:nth-child(2) {
-  position: relative;
-  height: 150px;
-}
-.home-skills_boxes_css > div:nth-child(1) > div:nth-child(3) {
-  position: relative;
-  height: 150px;
-}
 
-.home-skills_boxes_css > div:nth-child(2) {
-  position: relative;
-  border: 2px solid blue;
-  width: 50%;
-}
 
-/* HOME PAGE SKILLS SECTION 
-SECOND CHILD CSS
-*/
-
-.home-skills_boxes_css > div:nth-child(2) {
-  position: relative;
-  border: 2px solid blue;
-  /* width: 00%; */
-  height: 400px ;
-  /* background-color: pink; */
-}
-
-ul {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  margin: 0;
-  padding: 0;
-  gap: 10px;
-}
-
-ul li {
-  list-style: none;
-  margin: 0 5px;
-}
-
-ul li a .fa {
-  font-size: 40px;
-  color: #662626;
-  line-height: 80px;
-  transition: 0.5s;
-  padding-right: 14px;
-}
-
-ul li a span {
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  top: 30px;
-  color: #262626;
-  letter-spacing: 4px;
-  transition: 0.5s;
-}
-
-ul li a {
-  text-decoration: none;
-  display: absolute;
-  display: block;
-  width: 250px;
-  height: 80px;
-  background: #fff;
-  text-align: left;
-  padding-left: 10px;
-  transform: rotate(-30deg) skew(25deg) translate(0, 0);
-  transition: 0.5s;
-  box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
-}
-ul li a:before {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: -20px;
-  height: 100%;
-  width: 20px;
-  background: #b1b1b1;
-  transform: 0.5s;
-  transform: rotate(0deg) skewY(-45deg);
-}
-ul li a:after {
-  content: "";
-  position: absolute;
-  bottom: -20px;
-  left: -10px;
-  height: 20px;
-  width: 100%;
-  background: #b1b1b1;
-  transform: 0.5s;
-  transform: rotate(0deg) skewX(-45deg);
-}
-
-ul li a:hover {
-  transform: rotate(-30deg) skew(25deg) translate(20px, -15px);
-  box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
-}
-
-ul li:hover .fa {
-  color: #fff;
-}
-
-ul li:hover span {
-  color: #fff;
-}
-
-ul li:hover:nth-child(1) a {
-  background: #3b5998;
-}
-ul li:hover:nth-child(1) a:before {
-  background: #365492;
-}
-ul li:hover:nth-child(1) a:after {
-  background: #4a69ad;
-}
-
-ul li:hover:nth-child(2) a {
-  background: #00aced;
-}
-ul li:hover:nth-child(2) a:before {
-  background: #097aa5;
-}
-ul li:hover:nth-child(2) a:after {
-  background: #53b9e0;
-}
-
-ul li:hover:nth-child(3) a {
-  background: #dd4b39;
-}
-ul li:hover:nth-child(3) a:before {
-  background: #b33a2b;
-}
-ul li:hover:nth-child(3) a:after {
-  background: #e66a5a;
-}
-
-ul li:hover:nth-child(4) a {
-  background: #e4405f;
-}
-ul li:hover:nth-child(4) a:before {
-  background: #d81c3f;
-}
-ul li:hover:nth-child(4) a:after {
-  background: #e46880;
-}
-ul li a > i > img{
-  width: 50px;
-  height: 50px;
-}
 
 @keyframes sideBar_animation {
 }
