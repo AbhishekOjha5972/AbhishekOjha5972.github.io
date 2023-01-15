@@ -291,8 +291,6 @@ body {
   margin-top: 10px;
 }
 
-
-
 /* HOME PAGE SKILLS SECTION  */
 
 .home-skills_container_css {
@@ -360,7 +358,7 @@ SECOND CHILD CSS
   /* background-color: pink; */
 }
 
-ul {
+.home-skills_boxes_css ul {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -371,12 +369,12 @@ ul {
   gap: 40px;
 }
 
-ul li {
+.home-skills_boxes_css ul li {
   list-style: none;
   margin: 0 5px;
 }
 
-ul li a .fa {
+.home-skills_boxes_css ul li a .fa {
   font-size: 40px;
   color: #662626;
   line-height: 80px;
@@ -384,7 +382,7 @@ ul li a .fa {
   padding-right: 14px;
 }
 
-ul li a span {
+.home-skills_boxes_css ul li a span {
   padding: 0;
   margin: 0;
   position: absolute;
@@ -394,7 +392,7 @@ ul li a span {
   transition: 0.5s;
 }
 
-ul li a {
+.home-skills_boxes_css ul li a {
   text-decoration: none;
   display: absolute;
   display: block;
@@ -407,7 +405,7 @@ ul li a {
   transition: 0.5s;
   box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
 }
-ul li a:before {
+.home-skills_boxes_css ul li a:before {
   content: "";
   position: absolute;
   top: 10px;
@@ -418,7 +416,7 @@ ul li a:before {
   transform: 0.5s;
   transform: rotate(0deg) skewY(-45deg);
 }
-ul li a:after {
+.home-skills_boxes_css ul li a:after {
   content: "";
   position: absolute;
   bottom: -20px;
@@ -430,20 +428,20 @@ ul li a:after {
   transform: rotate(0deg) skewX(-45deg);
 }
 
-ul li a:hover {
+.home-skills_boxes_css ul li a:hover {
   transform: rotate(-30deg) skew(25deg) translate(20px, -15px);
   box-shadow: -50px 50px 50px rgba(0, 0, 0, 1);
 }
 
-ul li:hover .fa {
+.home-skills_boxes_css ul li:hover .fa {
   color: #fff;
 }
 
-ul li:hover span {
+.home-skills_boxes_css ul li:hover span {
   color: #fff;
 }
 
-ul li a > i > svg {
+.home-skills_boxes_css ul li a > i > svg {
   width: 50px;
   height: 50px;
   margin-top: 12px;
@@ -721,9 +719,6 @@ ul li a > i > svg {
   fill: #1d5791 !important;
 }
 
-
-
-
 .home-skills_boxes_css > div > div:nth-child(3) ul li:hover:nth-child(3) a {
   background: black;
 }
@@ -755,10 +750,8 @@ ul li a > i > svg {
   fill: white !important;
 }
 
-
-
 .home-skills_boxes_css > div > div:nth-child(3) ul li:hover:nth-child(4) a {
-  background: #764abb ;
+  background: #764abb;
 }
 .home-skills_boxes_css
   > div
@@ -766,7 +759,7 @@ ul li a > i > svg {
   ul
   li:hover:nth-child(4)
   a:before {
-  background: #503380 ;
+  background: #503380;
 }
 .home-skills_boxes_css
   > div
@@ -774,9 +767,8 @@ ul li a > i > svg {
   ul
   li:hover:nth-child(4)
   a:after {
-  background: #57378a ;
+  background: #57378a;
 }
-
 
 .home-skills_boxes_css
   > div
@@ -790,14 +782,41 @@ ul li a > i > svg {
   fill: white !important;
 }
 
+/* SKILL CSS WHEN THE PIXEL ARE LESSTHAN 1200PX */
+.home-skills_small_screen {
+  border: 1px solid blue;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-skills_small_screen > div:nth-child(1) {
+  width: 48%;
+  border: 1px solid yellow;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px 0;
+}
+
+.home-skills_small_screen > div:nth-child(1) > div{
+border: 1px solid yellow;
+display: flex;
+height: 50px;
+align-items: center;
+
+}
+.home-skills_small_screen > div:nth-child(1) > div > div{
+  border: 1px solid yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 48px;
+  }
 
 
-
-
-
-
-
-
+.home-skills_small_screen > div:nth-child(2) {
+  width: 48%;
+}
 
 /* RESPONSIVENESS  */
 @media only screen and (max-width: 765px) {
@@ -873,40 +892,43 @@ ul li a > i > svg {
     flex-direction: row;
   }
 
-
-
-
   /* SKILLS SECTION RESPONSIVENESS */
-
 }
 
 @media only screen and (max-width: 1180px) {
- /* SKILLS SECTION RESPONSIVENESS */
- ul{
-  gap: 0px;
- }
+  /* SKILLS SECTION RESPONSIVENESS */
+  .home-skills_boxes_css ul {
+    gap: 0px;
+  }
 
- ul li a {
-  width: 200px;
-  height: 60px;
- }
- ul li a span{
-  border: 2px solid red;
-  top:18px;
-  font-size: 14px;
- }
+  .home-skills_boxes_css ul li a {
+    width: 200px;
+    height: 60px;
+  }
+  .home-skills_boxes_css ul li a span {
+    /* border: 2px solid red; */
+    top: 18px;
+    font-size: 14px;
+  }
 
- ul li a .fa{
-  /* position: absolute; */
-  margin-top: -5px;
-  font-size: 35px;
- }
- ul li a i > svg{
-  height: 40px !important;
-  width: 40px  !important;
- }
-
+  .home-skills_boxes_css ul li a .fa {
+    /* position: absolute; */
+    margin-top: -5px;
+    font-size: 35px;
+  }
+  .home-skills_boxes_css ul li a i > svg {
+    height: 40px !important;
+    width: 40px !important;
+  }
 }
+
+@media only screen and (max-width: 900px) {
+  .home-skills_boxes_css{
+    display: none;
+  }
+}
+
+
 
 
 
