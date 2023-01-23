@@ -784,38 +784,58 @@ SECOND CHILD CSS
 
 /* SKILL CSS WHEN THE PIXEL ARE LESSTHAN 1200PX */
 .home-skills_small_screen {
-  border: 1px solid blue;
+  position: relative;
+  /* border: 11px solid blue; */
   display: flex;
   justify-content: space-between;
+  gap: 10px;
+  display: none;
 }
 
 .home-skills_small_screen > div:nth-child(1) {
   width: 48%;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px 0;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 20px;
+  /* background-color: yellow; */
 }
 
-.home-skills_small_screen > div:nth-child(1) > div{
-border: 1px solid yellow;
-display: flex;
-height: 50px;
-align-items: center;
-
+.home-skills_small_screen > div:nth-child(1) > div {
+  /* border: 1px solid yellow; */
+  display: flex;
+  height: 50px;
+  align-items: center;
+  border-radius: 10px;
+  padding: 30px 5px;
+  /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
+  animation: skillsGlow 3s ease-in-out infinite;
 }
-.home-skills_small_screen > div:nth-child(1) > div > div{
-  border: 1px solid yellow;
+
+.home-skills_small_screen > div:nth-child(1) > div > p {
+  margin-left: 10px;
+}
+.home-skills_small_screen > div:nth-child(1) > div > div {
+  /* border: 1px solid yellow; */
   display: flex;
   align-items: center;
   justify-content: center;
   height: 48px;
   width: 48px;
-  }
-
+}
 
 .home-skills_small_screen > div:nth-child(2) {
   width: 48%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(149, 139, 128);
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 3px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 10px;
+  /* background-color: #002bff; */
 }
 
 /* RESPONSIVENESS  */
@@ -893,8 +913,171 @@ align-items: center;
   }
 
   /* SKILLS SECTION RESPONSIVENESS */
+  .home-skills_container_css {
+    transition: all 2s ease-in-out;
+    height: fit-content;
+    padding: 0 0 30px 0;
+  }
+  .home-skills_container_css > div:nth-child(1) {
+    padding: 30px 0;
+    font-size: 25px;
+  }
+  .home-skills_small_screen > div:nth-child(1) {
+    width: 100%;
+  }
+  .home-skills_small_screen > div:nth-child(1) > div {
+    padding: 20px 5px;
+  }
+  .home-skills_small_screen > div:nth-child(1) > div > div {
+    height: 30px;
+    width: 30px;
+  }
+  .home-skills_small_screen > div:nth-child(2) {
+    display: none;
+  }
 }
 
+/*? TODO: PROJECT SECTION CSS */
+.home-projects_container_css {
+  border: 1px solid blue;
+  height: 100vh;
+  position: relative;
+
+}
+.home-projects_container_css > div:nth-child(1) {
+  border: 1px solid yellow;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 0;
+}
+.home-projects_container_css > div:nth-child(1) > p:first-child {
+  color: rgb(206, 212, 226);
+  font-weight: 600;
+}
+.home-projects_container_css > div:nth-child(1) > p:last-child {
+  color: rgb(103, 77, 137);
+
+}
+.home-projects_container_css > div:nth-child(2) {
+  border: 1px solid yellow;   
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 50px;
+  justify-content: center;
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+:root {
+  --card-height: 60vh;
+  --card-width: calc(var(--card-height) /1.2);
+}
+.home-projects_container_css > div:nth-child(2) > div {
+    background: #674d89;
+    width: var(--card-width);
+    height: var(--card-height);
+    padding: 3px;
+    position: relative;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 1.5em;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+    font-family: cursive;
+}
+.home-projects_container_css > div:nth-child(2) > div:hover {
+  color: rgb(88 199 250 / 100%);
+  transition: color 1s;
+}
+.home-projects_container_css > div:nth-child(2) > div:hover:before, .home-projects_container_css > div:nth-child(2) > div:hover:after {
+  animation: none;
+  opacity: 0;
+}
+
+.home-projects_container_css > div:nth-child(2) > div::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.home-projects_container_css > div:nth-child(2) > div::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+/* .home-about_me_css > div:nth-child(1) > p:first-child {
+  font-weight: 600;
+  color: rgb(206, 212, 226);
+}
+.home-about_me_css > div:nth-child(1) > p:last-child {
+  color: rgb(103, 77, 137);
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 900px) {
+  .home-skills_boxes_css {
+    display: none;
+  }
+  .home-skills_small_screen {
+    display: block;
+    display: flex;
+  }
+}
 @media only screen and (max-width: 1180px) {
   /* SKILLS SECTION RESPONSIVENESS */
   .home-skills_boxes_css ul {
@@ -922,17 +1105,6 @@ align-items: center;
   }
 }
 
-@media only screen and (max-width: 900px) {
-  .home-skills_boxes_css{
-    display: none;
-  }
-}
-
-
-
-
-
-
 @keyframes sideBar_animation {
 }
 
@@ -954,5 +1126,22 @@ align-items: center;
   }
   100% {
     background-position: 0 0;
+  }
+}
+
+@keyframes skillsGlow {
+  0% {
+    box-shadow: rgb(29, 29, 29) 0px 2px 4px, rgb(29, 29, 29) 0px 7px 13px -3px,
+      rgb(29, 29, 29) 0px -3px 0px inset;
+  }
+
+  50% {
+    box-shadow: rgb(103, 77, 137, 0.4) 0px 2px 4px,
+      rgba(103, 77, 137, 0.3) 0px 7px 13px -3px,
+      rgba(103, 97, 137, 0.2) 0px -3px 0px inset;
+  }
+  100% {
+    box-shadow: rgb(29, 29, 29) 0px 2px 4px, rgb(29, 29, 29) 0px 7px 13px -3px,
+      rgb(29, 29, 29) 0px -3px 0px inset;
   }
 }

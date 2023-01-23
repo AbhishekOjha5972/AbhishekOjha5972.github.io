@@ -22,7 +22,6 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <div></div>
       <Box className="home_css">
         {/* Top section */}
         <Box id="home">
@@ -205,23 +204,39 @@ const Home = () => {
           </Box>
 
           <Box className="home-skills_small_screen">
-            <Box>
+            <Box data-aos="zoom-out-right" data-aos-duration="1000">
               {skillsData.map((ele) => {
                 return (
                   <div key={ele.id}>
                     <div>
                       <img src={ele.svg} alt={ele.skill_name} />
                     </div>
-                    <button>{ele.skill_name}</button>
+                    <Text >{ele.skill_name}</Text>
                   </div>
                 );
               })}
             </Box>
-            <Box>
+            <Box data-aos="zoom-out-left" data-aos-duration="1000">
               <SkillsMan/>
             </Box>
           </Box>
         </Box>
+
+        {/* Project Section  */}
+        <Box className="home-projects_container_css" id="projects">
+          
+              <Box>
+                  <Text>Project</Text>
+                  <Text>s</Text>
+              </Box>
+              <Box>
+                <Box></Box>
+                <Box></Box>
+                <Box></Box>
+                <Box></Box>
+              </Box>
+        </Box>
+
       </Box>
     </>
   );
