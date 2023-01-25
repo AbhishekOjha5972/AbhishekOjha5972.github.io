@@ -1,4 +1,13 @@
-import { Box, Container, Divider, Image, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Container,
+  Divider,
+  Flex,
+  Image,
+  Link,
+  Text,
+} from "@chakra-ui/react";
 import Navbar from "../Components/Navbar";
 import boy_svg from "../project_images/boy_image.svg";
 import boy_svg1 from "../project_images/boy_image1.svg";
@@ -14,11 +23,39 @@ import NextJS from "../project_images/Components_for_Images/NextJS";
 import Redux from "../project_images/Components_for_Images/Redux";
 import skillsData from "../Data/skillsData";
 import SkillsMan from "../project_images/Components_for_Images/SkillsMan";
+import rentomojo from "..//project_images/rentomojo.png";
+import junctionPlus from "..//project_images/junctionplus.png"
+import foodium from "../project_images/foodium.png"
+
+
+let projectsData = [
+  {
+    title: "Junction Plus",
+    image: junctionPlus,
+    github:"https://github.com/AbhishekOjha5972/childlike-temper-5127",
+    deployment:"https://junction-plus.vercel.app/"
+  },
+{
+  title: "Rentomojo",
+  image: rentomojo,
+  github:"https://github.com/AbhishekOjha5972/-hard-birds-9261",
+  deployment:"https://rentomojoapp.netlify.app/"
+},
+{
+  title: "Foodium",
+  image: foodium,
+  github:"https://github.com/AbhishekOjha5972/zonked-hall-6274",
+  deployment:"https://foodium-project.netlify.app/"
+}
+];
+
+
 
 const Home = () => {
   useEffect(() => {
     Aos.init();
   }, []);
+  console.log('projectsData:', projectsData)
   return (
     <>
       <Navbar />
@@ -211,32 +248,42 @@ const Home = () => {
                     <div>
                       <img src={ele.svg} alt={ele.skill_name} />
                     </div>
-                    <Text >{ele.skill_name}</Text>
+                    <Text>{ele.skill_name}</Text>
                   </div>
                 );
               })}
             </Box>
             <Box data-aos="zoom-out-left" data-aos-duration="1000">
-              <SkillsMan/>
+              <SkillsMan />
             </Box>
           </Box>
         </Box>
 
         {/* Project Section  */}
         <Box className="home-projects_container_css" id="projects">
-          
-              <Box>
-                  <Text>Project</Text>
-                  <Text>s</Text>
-              </Box>
-              <Box>
-                <Box></Box>
-                <Box></Box>
-                <Box></Box>
-                <Box></Box>
-              </Box>
+          <Box>
+            <Text>Project</Text>
+            <Text>s</Text>
+          </Box>
+          <Box>
+            {projectsData.map((ele) => {
+              return (
+                <Box>
+                  <Box>
+                    <Box style={{background:`url(${ele.image})`}}>
+                      {/* <Image src={ele.image}/> */}
+                    </Box>
+                    <Text>{ele.title}</Text>
+                    <Flex>
+                      <Link href={ele.github} target="_blank">GitHub</Link>
+                      <Link href={ele.deployment} target="_blank">Deployment</Link>
+                    </Flex>
+                  </Box>
+                </Box>
+              );
+            })}
+          </Box>
         </Box>
-
       </Box>
     </>
   );

@@ -316,9 +316,9 @@ body {
 /* HOME PAGE SKILLS SECTION 
 FIRST CHILD CSS
 */
-.home-skills_boxes_css {
-  /* display: flex; */
-}
+/* .home-skills_boxes_css { */
+/* display: flex; */
+/* } */
 .home-skills_boxes_css > div:nth-child(1) {
   position: relative;
   /* border: 2px solid green; */
@@ -942,7 +942,6 @@ SECOND CHILD CSS
   border: 1px solid blue;
   height: 100vh;
   position: relative;
-
 }
 .home-projects_container_css > div:nth-child(1) {
   border: 1px solid yellow;
@@ -958,15 +957,15 @@ SECOND CHILD CSS
 }
 .home-projects_container_css > div:nth-child(1) > p:last-child {
   color: rgb(103, 77, 137);
-
 }
 .home-projects_container_css > div:nth-child(2) {
-  border: 1px solid yellow;   
+  border: 1px solid yellow;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   gap: 20px 50px;
   justify-content: center;
+  position: relative;
 }
 
 @property --rotate {
@@ -977,97 +976,111 @@ SECOND CHILD CSS
 
 :root {
   --card-height: 60vh;
-  --card-width: calc(var(--card-height) /1.2);
-}
-.home-projects_container_css > div:nth-child(2) > div {
-    background: #674d89;
-    width: var(--card-width);
-    height: var(--card-height);
-    padding: 3px;
-    position: relative;
-    border-radius: 6px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    display: flex;
-    font-size: 1.5em;
-    color: rgb(88 199 250 / 0%);
-    cursor: pointer;
-    font-family: cursive;
-}
-.home-projects_container_css > div:nth-child(2) > div:hover {
-  color: rgb(88 199 250 / 100%);
-  transition: color 1s;
-}
-.home-projects_container_css > div:nth-child(2) > div:hover:before, .home-projects_container_css > div:nth-child(2) > div:hover:after {
-  animation: none;
-  opacity: 0;
+  --card-width: calc(var(--card-height) / 1.2);
 }
 
-.home-projects_container_css > div:nth-child(2) > div::before {
-  content: "";
-  width: 104%;
-  height: 102%;
+.home-projects_container_css > div:nth-child(2) > div {
+  all: initial;
+  position: relative;
+  height: var(--card-height);
+  width: var(--card-width);
   border-radius: 8px;
   background-image: linear-gradient(
-    var(--rotate)
-    , #5ddcff, #3c67e3 43%, #4e00c2);
-    position: absolute;
-    z-index: -1;
-    top: -1%;
-    left: -2%;
-    animation: spin 2.5s linear infinite;
-}
-
-.home-projects_container_css > div:nth-child(2) > div::after {
-  position: absolute;
-  content: "";
-  top: calc(var(--card-height) / 6);
-  left: 0;
-  right: 0;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-  transform: scale(0.8);
-  filter: blur(calc(var(--card-height) / 6));
-  background-image: linear-gradient(
-    var(--rotate)
-    , #5ddcff, #3c67e3 43%, #4e00c2);
-    opacity: 1;
-  transition: opacity .5s;
+    var(--rotate),
+    #5ddcff,
+    #3c67e3 43%,
+    #4e00c2
+  );
   animation: spin 2.5s linear infinite;
 }
 
-@keyframes spin {
-  0% {
-    --rotate: 0deg;
-  }
-  100% {
-    --rotate: 360deg;
-  }
+.home-projects_container_css > div:nth-child(2) > div > div {
+  position: absolute;
+  width: 98%;
+  height: 98%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 8px;
+  background: #674d89;
+  background: rgb(29, 29, 29);
 }
 
-/* .home-about_me_css > div:nth-child(1) > p:first-child {
-  font-weight: 600;
-  color: rgb(206, 212, 226);
+.home-projects_container_css > div:nth-child(2) > div > div > div:nth-child(1) {
+  height: 70%;
+  width: 100%;
+  border: 2px solid blue;
+  /* position: relative; */
+  background-position: top;
+  /* overflow: hidden; */
+  background-repeat: no-repeat;
+  background-size: 100px;
+  transition: all 3s ease-in-out;
 }
-.home-about_me_css > div:nth-child(1) > p:last-child {
-  color: rgb(103, 77, 137);
+/* .home-projects_container_css
+   > div:nth-child(2)
+  > div
+  > div
+  > div:nth-child(1)
+  > img {
+  width: 100%;
+  top: 0;
+  height: auto;
+  position: absolute;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: top 11s;
+  -moz-transition: top 11s;
+  -ms-transition: top 11s;
+  -o-transition: top 11s;
+  transition: bottom 11s;
+  transition: all 5s ease-in-out;
+  border-radius: 8px; 
+
 } */
+.home-projects_container_css
+  > div:nth-child(2)
+  > div
+  > div
+  > div:nth-child(1):hover {
+background-position: bottom;
+}
 
+.home-projects_container_css > div:nth-child(2) > div > div > p:nth-child(2) {
+  padding: 10px;
+  color: rgb(206, 212, 226);
+  font-weight: 600;
+  font-size: 20px;
+}
 
+.home-projects_container_css > div:nth-child(2) > div > div > div:nth-child(3) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.home-projects_container_css
+  > div:nth-child(2)
+  > div
+  > div
+  > div:nth-child(3)
+  > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  color: rgb(206, 212, 226);
+  padding: 10px;
+  background-color: rgb(43, 42, 42);
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
 
-
-
-
-
-
-
-
-
-
-
+  
+}
 
 @media only screen and (max-width: 900px) {
   .home-skills_boxes_css {
@@ -1143,5 +1156,14 @@ SECOND CHILD CSS
   100% {
     box-shadow: rgb(29, 29, 29) 0px 2px 4px, rgb(29, 29, 29) 0px 7px 13px -3px,
       rgb(29, 29, 29) 0px -3px 0px inset;
+  }
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
   }
 }
