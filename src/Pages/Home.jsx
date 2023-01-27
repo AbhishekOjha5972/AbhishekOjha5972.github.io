@@ -1,61 +1,90 @@
-import {
-  Box,
-  Button,
-  Container,
-  Divider,
-  Flex,
-  Image,
-  Link,
-  Text,
-} from "@chakra-ui/react";
-import Navbar from "../Components/Navbar";
-import boy_svg from "../project_images/boy_image.svg";
-import boy_svg1 from "../project_images/boy_image1.svg";
-import profile_image from "../project_images/profile.jpg";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
-import Firebase from "../project_images/Components_for_Images/Firebase";
-import Chakra from "../project_images/Components_for_Images/Chakra";
-import ExpressJS from "../project_images/Components_for_Images/ExpressJS";
 import Typescript from "../project_images/Components_for_Images/Typescript";
-import NextJS from "../project_images/Components_for_Images/NextJS";
-import Redux from "../project_images/Components_for_Images/Redux";
-import skillsData from "../Data/skillsData";
 import SkillsMan from "../project_images/Components_for_Images/SkillsMan";
+import ExpressJS from "../project_images/Components_for_Images/ExpressJS";
+import Firebase from "../project_images/Components_for_Images/Firebase";
+import NextJS from "../project_images/Components_for_Images/NextJS";
+import Chakra from "../project_images/Components_for_Images/Chakra";
+import Redux from "../project_images/Components_for_Images/Redux";
+import { Box, Button, Flex, Image, Link, Text } from "@chakra-ui/react";
+import junctionPlus from "..//project_images/junctionplus.png";
+import profile_image from "../project_images/profile.jpg";
 import rentomojo from "..//project_images/rentomojo.png";
-import junctionPlus from "..//project_images/junctionplus.png"
-import foodium from "../project_images/foodium.png"
+import boy_svg1 from "../project_images/boy_image1.svg";
+import boy_svg from "../project_images/boy_image.svg";
+import foodium from "../project_images/foodium.png";
+import skillsData from "../Data/skillsData";
+import {AiFillGithub} from "react-icons/ai"
+import Navbar from "../Components/Navbar";
+import {FaOctopusDeploy} from "react-icons/fa"
+import { useEffect } from "react";
+import "aos/dist/aos.css";
+import Aos from "aos";
 
+import javascript_image from "../project_images/png_images/javascript.png";
+import chakra from "../project_images/png_images/chakra.png";
+import html from "../project_images/png_images/html.png";
+import css from "../project_images/png_images/css.png";
+import firebase from "../project_images/png_images/firebase.png";
+import jquery from "../project_images/png_images/jquery.png";
+import json from "../project_images/png_images/json.png";
+import react from "../project_images/png_images/react.png";
+import vercel from "../project_images/png_images/triangle.png";
 
 let projectsData = [
   {
     title: "Junction Plus",
     image: junctionPlus,
-    github:"https://github.com/AbhishekOjha5972/childlike-temper-5127",
-    deployment:"https://junction-plus.vercel.app/"
+    github: "https://github.com/AbhishekOjha5972/childlike-temper-5127",
+    deployment: "https://junction-plus.vercel.app/",
+    description:
+      "This project is completely based on real life use case in which you can see the live updates of movies and tv shows which are currently running in theatres and on tv's",
+    skills: [
+      [html, "HTML"],
+      [css, "Css"],
+      [javascript_image, "JavaScript"],
+      [react, "React"],
+      [json, "Json"],
+      [firebase, "Firebase"],
+      [vercel, "Vercel"],
+      [chakra, "Chakra"],
+    ],
   },
-{
-  title: "Rentomojo",
-  image: rentomojo,
-  github:"https://github.com/AbhishekOjha5972/-hard-birds-9261",
-  deployment:"https://rentomojoapp.netlify.app/"
-},
-{
-  title: "Foodium",
-  image: foodium,
-  github:"https://github.com/AbhishekOjha5972/zonked-hall-6274",
-  deployment:"https://foodium-project.netlify.app/"
-}
+  {
+    title: "Rentomojo",
+    image: rentomojo,
+    github: "https://github.com/AbhishekOjha5972/-hard-birds-9261",
+    deployment: "https://rentomojoapp.netlify.app/",
+    description:
+      "In this app you can buy many type of furniture and electronics",
+    skills: [
+      [html, "HTML"],
+      [css, "Css"],
+      [javascript_image, "JavaScript"],
+      [jquery, "JQuery"],
+    ],
+  },
+  {
+    title: "Foodium",
+    image: foodium,
+    github: "https://github.com/AbhishekOjha5972/zonked-hall-6274",
+    deployment: "https://foodium-project.netlify.app/",
+    description:
+      "This app is made for ordering healthy food. In this app you can order many types of food according to your diet",
+    skills: [
+      [html, "HTML"],
+      [css, "Css"],
+      [javascript_image, "JavaScript"],
+      [jquery, "JQuery"],
+      [json, "JSon"],
+    ],
+  },
 ];
-
-
 
 const Home = () => {
   useEffect(() => {
     Aos.init();
   }, []);
-  console.log('projectsData:', projectsData)
+  console.log("projectsData:", projectsData);
   return (
     <>
       <Navbar />
@@ -270,14 +299,37 @@ const Home = () => {
               return (
                 <Box>
                   <Box>
-                    <Box style={{background:`url(${ele.image})`}}>
+                    <Box style={{ background: `url(${ele.image})` }}>
                       {/* <Image src={ele.image}/> */}
                     </Box>
                     <Text>{ele.title}</Text>
                     <Flex>
-                      <Link href={ele.github} target="_blank">GitHub</Link>
-                      <Link href={ele.deployment} target="_blank">Deployment</Link>
+                      <Link href={ele.github} target="_blank">
+                       <AiFillGithub/>GitHub
+                      </Link>
+                      <Link href={ele.deployment} target="_blank">
+                       <FaOctopusDeploy/> App
+                      </Link>
                     </Flex>
+                    <Box data-aos="fade-down">
+                      <Box>
+                        <Button>Tech Stack</Button>
+                        <Box>
+                          {ele.skills.map((item) => {
+                            return (
+                              <Box>
+                                <Image w="20px" h="20px" src={item[0]} />
+                                <Text>{item[1]}</Text>
+                              </Box>
+                            );
+                          })}
+                        </Box>
+                      </Box>
+                      <Box>
+                        <Button>Description</Button>
+                        <Box>{ele.description}</Box>
+                      </Box>
+                    </Box>
                   </Box>
                 </Box>
               );
