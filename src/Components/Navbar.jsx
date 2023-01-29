@@ -52,7 +52,7 @@ const Navbar = () => {
             <Link href="#resume">Resume</Link>
           </Box>
           <Box>
-            <Link href="#Contact Me">Contact Me</Link>
+            <Link href="#ContactMe">Contact Me</Link>
           </Box>
         </Box>
         <Box display={["block", "block", "none"]} className="navBar_SideBar">

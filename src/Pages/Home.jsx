@@ -5,7 +5,16 @@ import Firebase from "../project_images/Components_for_Images/Firebase";
 import NextJS from "../project_images/Components_for_Images/NextJS";
 import Chakra from "../project_images/Components_for_Images/Chakra";
 import Redux from "../project_images/Components_for_Images/Redux";
-import { Box, Button, Flex, Image, Link, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Image,
+  Input,
+  Link,
+  Text,
+  Textarea,
+} from "@chakra-ui/react";
 import junctionPlus from "..//project_images/junctionplus.png";
 import profile_image from "../project_images/profile.jpg";
 import rentomojo from "..//project_images/rentomojo.png";
@@ -13,12 +22,14 @@ import boy_svg1 from "../project_images/boy_image1.svg";
 import boy_svg from "../project_images/boy_image.svg";
 import foodium from "../project_images/foodium.png";
 import skillsData from "../Data/skillsData";
-import {AiFillGithub} from "react-icons/ai"
+import { AiFillGithub } from "react-icons/ai";
 import Navbar from "../Components/Navbar";
-import {FaOctopusDeploy} from "react-icons/fa"
+import { FaOctopusDeploy } from "react-icons/fa";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
 import Aos from "aos";
+import { useForm, ValidationError } from "@formspree/react";
+import ContectMe from "../project_images/Components_for_Images/ContectMe";
 
 import javascript_image from "../project_images/png_images/javascript.png";
 import chakra from "../project_images/png_images/chakra.png";
@@ -81,10 +92,15 @@ let projectsData = [
 ];
 
 const Home = () => {
+  const [state, handleSubmit] = useForm("mnqyjvay");
   useEffect(() => {
     Aos.init();
   }, []);
-  console.log("projectsData:", projectsData);
+
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+  }
+
   return (
     <>
       <Navbar />
@@ -305,10 +321,11 @@ const Home = () => {
                     <Text>{ele.title}</Text>
                     <Flex>
                       <Link href={ele.github} target="_blank">
-                       <AiFillGithub/>GitHub
+                        <AiFillGithub />
+                        GitHub
                       </Link>
                       <Link href={ele.deployment} target="_blank">
-                       <FaOctopusDeploy/> App
+                        <FaOctopusDeploy /> App
                       </Link>
                     </Flex>
                     <Box data-aos="fade-down">
@@ -334,6 +351,74 @@ const Home = () => {
                 </Box>
               );
             })}
+          </Box>
+        </Box>
+
+        {/* Contect Me Section  */}
+        <Box className="home-contect_me_container_css">
+          <Box id="ContactMe">
+            <Text>Contect </Text>
+            <Text>Me</Text>
+          </Box>
+          <Box>
+            <Box>
+              <ContectMe />
+            </Box>
+            <Box>
+              <Box>
+                <Text color="rgb(206, 212, 226)">Get in </Text>
+                <Text color="rgb(103, 77, 137)"> Touch</Text>
+              </Box>
+              <form onSubmit={handleSubmit}>
+                <Box>
+                  <Input
+                    name="name"
+                    type="name"
+                    placeholder=" "
+                    _focus={{ borderColor: "rgb(206, 212, 226)" }}
+                  />
+                  <span>Your Name</span>
+                </Box>
+                <Box>
+                  <Input
+                    name="email"
+                    type="email"
+                    placeholder=" "
+                    _focus={{ borderColor: "rgb(206, 212, 226)" }}
+                  />
+                  <span>Email Address</span>
+                </Box>
+                <Box>
+                  <Textarea
+                    color="white"
+                    name="message"
+                    placeholder=" "
+                    _focus={{ borderColor: "rgb(206, 212, 226)" }}
+                  />
+                  <span>Type your Message</span>
+                </Box>
+                <Button
+                  width="100%"
+                  color="rgb(103, 77, 137)"
+                  bg="rgb(206, 212, 226)"
+                  fontWeight="600"
+                  fontSize="18px"
+                  type="submit"
+                  disabled={state.submitting}
+                >
+                  Send
+                </Button>
+              </form>
+            </Box>
+          </Box>
+          <Box>
+          <ul>
+  <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+  <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+  <li><a href="#"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a></li>
+  <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+  <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+</ul>
           </Box>
         </Box>
       </Box>
