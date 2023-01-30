@@ -1083,13 +1083,12 @@ SECOND CHILD CSS
   justify-content: center;
   width: 70%;
   border-bottom: 3px solid rgb(103, 77, 137);
-
 }
 .home-contect_me_container_css
   > div:nth-child(2)
   > div:nth-child(2)
   > form:nth-child(2) {
-  width: 70%
+  width: 70%;
 }
 .home-contect_me_container_css
   > div:nth-child(2)
@@ -1153,89 +1152,196 @@ SECOND CHILD CSS
   font-size: 14px;
   background-color: #2b2a2a;
   z-index: 1;
+  /* color: #2b2a2a; */
+  border-radius: 5px;
 }
 
-.home-contect_me_container_css
-  > div:nth-child(3){
-    position: relative;
-    height: 200px;
+/* Footer Section Css  */
+
+.home-footer{
+  /* border:2px solid blue; */
+  position: relative;
+  color: rgb(206, 212, 226) !important;
+  background-color: #2b2a2a;
+  margin-top: 20px;
+  border-radius: 5px 5px 0 0;
+}
+.home-footer > div:nth-child(1){
+  color: rgb(206, 212, 226);
+  height: 100px;
+  font-size: 35px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-footer > div:nth-child(2){
+/* border: 3px solid blue; */
+font-size: 20px;
+/* height: 300px; */
+/* width: 100%; */
+}
+.home-footer > div:nth-child(2) > a{
+  text-decoration: none !important;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.home-footer 
+>div:nth-child(3) {
+  position: relative;
+  height: 100px;
+ 
+}
+.home-footer 
+>div:nth-child(3) > ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.home-footer 
+>div:nth-child(3) > ul li {
+  list-style: none;
+}
+
+.home-footer 
+>div:nth-child(3) > ul li a {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: block;
+  text-align: center;
+  margin: 0 10px;
+  border-radius: 50%;
+  padding: 6px;
+  box-sizing: border-box;
+  text-decoration: none;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(0deg, #ddd, #fff);
+  transition: 0.5s;
+}
+
+.home-footer 
+>div:nth-child(3) > ul li a:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.home-footer 
+>div:nth-child(3) > ul li a .fab {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: linear-gradient(0deg, #fff, #ddd);
+  border-radius: 50%;
+  line-height: calc(60px - 12px);
+  font-size: 24px;
+  color: #262626;
+  transition: 0.5s;
+}
+
+.home-footer 
+>div:nth-child(3)  > ul li:nth-child(1) a:hover .fab {
+  color: #3b5998;
+}
+
+.home-footer 
+>div:nth-child(3)  > ul li:nth-child(2) a:hover .fab {
+  color: #00aced;
+}
+
+.home-footer 
+>div:nth-child(3)  > ul li:nth-child(3) a:hover .fab {
+  color: #dd4b39;
+}
+
+.home-footer 
+>div:nth-child(3)  > ul li:nth-child(4) a:hover .fab {
+  color: #007bb6;
+}
+
+.home-footer 
+>div:nth-child(3)  > ul li:nth-child(5) a:hover .fab {
+  color: #e4405f;
+}
+
+
+.home-goto_top{
+  position: fixed;
+  bottom: 10px;
+  right: 2.5%;
+}
+.home-goto_top > span{
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  background-color: #1d1d1d;
+  height: 52px;
+  width: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.home-goto_top > span > img{
+height: 45px;
+width: 45px;
+/* background-color: yellow; */
+border-radius: 50%;
+}
+.loader {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(#00FF00, #00FF00, #00FF00);
+  animation: animate 1s linear infinite;
+  background: transparent;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
   }
-  .home-contect_me_container_css
-  > div:nth-child(3) > ul {
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    margin:0;
-    padding:0;
-    display:flex;
+  100% {
+    transform: rotate(360deg);
   }
-  
-  .home-contect_me_container_css
-  > div:nth-child(3) > ul li {
-    list-style: none;
-  }
-  
-  .home-contect_me_container_css
-  > div:nth-child(3) > ul li a {
-    position: relative;
-    width:60px;
-    height:60px;
-    display:block;
-    text-align:center;
-    margin:0 10px;
-    border-radius: 50%;
-    padding: 6px;
-    box-sizing: border-box;
-    text-decoration:none;
-    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
-    background: linear-gradient(0deg, #ddd, #fff);
-    transition: .5s;
-  }
-  
-  .home-contect_me_container_css
-  > div:nth-child(3) > ul li a:hover {
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    text-decoration:none;
-  }
-  
-  .home-contect_me_container_css
-  > div:nth-child(3) > ul li a .fab {
-    width: 100%;
-    height:100%;
-    display:block;
-    background: linear-gradient(0deg, #fff, #ddd);
-    border-radius: 50%;
-    line-height: calc(60px - 12px);
-    font-size:24px;
-    color: #262626;
-    transition: .5s;
-  }
-  
-  .home-contect_me_container_css
-  > div:nth-child(3) > ul li:nth-child(1) a:hover .fab {
-    color: #3b5998;
-  }
-  
-  .home-contect_me_container_css
-  > div:nth-child(3) > ul li:nth-child(2) a:hover .fab {
-    color: #00aced;
-  }
-  
-  .home-contect_me_container_css
-  > div:nth-child(3) > ul li:nth-child(3) a:hover .fab {
-    color: #dd4b39;
-  }
-  
-  .home-contect_me_container_css
-  > div:nth-child(3) > ul li:nth-child(4) a:hover .fab {
-    color: #007bb6;
-  }
-  
-  .home-contect_me_container_css
-  > div:nth-child(3) > ul li:nth-child(5) a:hover .fab {
-    color: #e4405f;
-  }
+}
+
+.loader span {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(#00b2ff, #00ffbb, #6bff6b);
+}
+
+.loader span:nth-child(1) {
+  filter: blur(5px);
+}
+
+.loader span:nth-child(2) {
+  filter: blur(10px);
+}
+
+.loader::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: #162434;
+  border-radius: 50%;
+}
 
 
 /* RESPONSIVENESS  */
@@ -1336,14 +1442,19 @@ SECOND CHILD CSS
     display: none;
   }
 
-    /* CONTECT ME RESPONSIVENESS */
-.home-contect_me_container_css > div:nth-child(2) > div:nth-child(1) {
-  display: none;
-}
-.home-contect_me_container_css > div:nth-child(2) > div:nth-child(2) {
-  width: 100%;
-}
-  
+  /* CONTECT ME RESPONSIVENESS */
+  .home-contect_me_container_css > div:nth-child(2) > div:nth-child(1) {
+    display: none;
+  }
+  .home-contect_me_container_css > div:nth-child(2) > div:nth-child(2) {
+    width: 100%;
+  }
+  .home-contect_me_container_css
+    > div:nth-child(2)
+    > div:nth-child(2)
+    > form:nth-child(2) {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 900px) {

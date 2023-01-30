@@ -9,11 +9,13 @@ import {
   Box,
   Button,
   Flex,
+  Heading,
   Image,
   Input,
   Link,
   Text,
   Textarea,
+  useToast,
 } from "@chakra-ui/react";
 import junctionPlus from "..//project_images/junctionplus.png";
 import profile_image from "../project_images/profile.jpg";
@@ -25,11 +27,14 @@ import skillsData from "../Data/skillsData";
 import { AiFillGithub } from "react-icons/ai";
 import Navbar from "../Components/Navbar";
 import { FaOctopusDeploy } from "react-icons/fa";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import "aos/dist/aos.css";
 import Aos from "aos";
 import { useForm, ValidationError } from "@formspree/react";
 import ContectMe from "../project_images/Components_for_Images/ContectMe";
+import { SiHandshakeProtocol } from "react-icons/si";
+import { AiFillMail } from "react-icons/ai";
+import { BsFillTelephoneFill } from "react-icons/bs";
 
 import javascript_image from "../project_images/png_images/javascript.png";
 import chakra from "../project_images/png_images/chakra.png";
@@ -93,12 +98,44 @@ let projectsData = [
 
 const Home = () => {
   const [state, handleSubmit] = useForm("mnqyjvay");
+  const emailInput = useRef(null);
+  const nameInput = useRef(null);
+  const messageInput = useRef(null);
+  const toast = useToast();
+
   useEffect(() => {
     Aos.init();
   }, []);
 
+  const handleMessage = () => {
+    console.log(emailInput.current.value);
+    if (
+      emailInput.current.value == "" &&
+      nameInput.current.value == "" &&
+      messageInput.current.value == ""
+    ) {
+      toast({
+        title: "Account created.",
+        description: "Please fill all the fields!.",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
+      return;
+    }
+  };
+
   if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
+    emailInput.current.value = "";
+    nameInput.current.value = "";
+    messageInput.current.value = "";
+    toast({
+      title: "Account created.",
+      description: "The mail has been sent.",
+      status: "success",
+      duration: 5000,
+      isClosable: true,
+    });
   }
 
   return (
@@ -311,9 +348,9 @@ const Home = () => {
             <Text>s</Text>
           </Box>
           <Box>
-            {projectsData.map((ele) => {
+            {projectsData.map((ele, i) => {
               return (
-                <Box>
+                <Box key={i}>
                   <Box>
                     <Box style={{ background: `url(${ele.image})` }}>
                       {/* <Image src={ele.image}/> */}
@@ -332,9 +369,9 @@ const Home = () => {
                       <Box>
                         <Button>Tech Stack</Button>
                         <Box>
-                          {ele.skills.map((item) => {
+                          {ele.skills.map((item, ind) => {
                             return (
-                              <Box>
+                              <Box key={ind}>
                                 <Image w="20px" h="20px" src={item[0]} />
                                 <Text>{item[1]}</Text>
                               </Box>
@@ -356,8 +393,8 @@ const Home = () => {
 
         {/* Contect Me Section  */}
         <Box className="home-contect_me_container_css">
-          <Box id="ContactMe">
-            <Text>Contect </Text>
+          <Box id="ContactMe" gap="10px">
+            <Text>Contact</Text>
             <Text>Me</Text>
           </Box>
           <Box>
@@ -375,6 +412,7 @@ const Home = () => {
                     name="name"
                     type="name"
                     placeholder=" "
+                    ref={nameInput}
                     _focus={{ borderColor: "rgb(206, 212, 226)" }}
                   />
                   <span>Your Name</span>
@@ -384,6 +422,7 @@ const Home = () => {
                     name="email"
                     type="email"
                     placeholder=" "
+                    ref={emailInput}
                     _focus={{ borderColor: "rgb(206, 212, 226)" }}
                   />
                   <span>Email Address</span>
@@ -393,6 +432,7 @@ const Home = () => {
                     color="white"
                     name="message"
                     placeholder=" "
+                    ref={messageInput}
                     _focus={{ borderColor: "rgb(206, 212, 226)" }}
                   />
                   <span>Type your Message</span>
@@ -405,22 +445,85 @@ const Home = () => {
                   fontSize="18px"
                   type="submit"
                   disabled={state.submitting}
+                  onClick={handleMessage}
                 >
                   Send
                 </Button>
               </form>
             </Box>
           </Box>
+        </Box>
+
+        {/* Footer And Connection */}
+        <Box className="home-footer">
           <Box>
-          <ul>
-  <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-  <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-  <li><a href="#"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a></li>
-  <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-  <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-</ul>
+            {/* <Text color="rgb(206, 212, 226)">Via</Text> */}
+            <Text color="rgb(103, 77, 137)">
+              {" "}
+              <SiHandshakeProtocol />
+            </Text>
+          </Box>
+          <Box>
+            <Link href="https://mail.google.com/mail/u/0/#inbox?compose=new">
+              <i>
+                <AiFillMail />
+              </i>
+              <Text>aojha7408@gmail.com</Text>
+            </Link>
+            <Link href="tel:6261036892">
+              <i>
+                <BsFillTelephoneFill />
+              </i>
+              <Text>+916261036892</Text>
+            </Link>
+
+            <Link>
+              <Text></Text>
+            </Link>
+          </Box>
+          <Box>
+            <ul>
+              <li>
+                <a href="https://github.com/AbhishekOjha5972" target="_blank">
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/aojha7408" target="_blank">
+                  <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://myaccount.google.com/u/1/profile?pageId=none"
+                  target="_blank"
+                >
+                  <i class="fab fa-google-plus-g" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="linkedin.com/in/abhishek-ojha-03794b1aa"
+                  target="_blank"
+                >
+                  <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
           </Box>
         </Box>
+
+        {/* Go to the top  */}
+        <Link className="home-goto_top"  data-aos="fade-left" href="#home">
+        <div class="loader">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <span><img src="https://media.tenor.com/24-42ZZr3AcAAAAi/emojis-emoji.gif"/></span>
+
+        </Link>
       </Box>
     </>
   );
