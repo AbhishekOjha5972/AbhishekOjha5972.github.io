@@ -35,6 +35,8 @@ import ContectMe from "../project_images/Components_for_Images/ContectMe";
 import { SiHandshakeProtocol } from "react-icons/si";
 import { AiFillMail } from "react-icons/ai";
 import { BsFillTelephoneFill } from "react-icons/bs";
+import GitHubCalendar from 'react-github-calendar';
+import ReactTooltip from 'react-tooltip';
 
 import javascript_image from "../project_images/png_images/javascript.png";
 import chakra from "../project_images/png_images/chakra.png";
@@ -503,7 +505,7 @@ const Home = () => {
               </li>
               <li>
                 <a
-                  href="linkedin.com/in/abhishek-ojha-03794b1aa"
+                  href="https://www.linkedin.com/in/abhishek-ojha-03794b1aa/"
                   target="_blank"
                 >
                   <i class="fab fa-linkedin" aria-hidden="true"></i>
@@ -522,8 +524,14 @@ const Home = () => {
           <span></span>
         </div>
         <span><img src="https://media.tenor.com/24-42ZZr3AcAAAAi/emojis-emoji.gif"/></span>
-
         </Link>
+
+        <Box color="white" fill="yellow">
+        <GitHubCalendar username="AbhishekOjha5972"
+        showWeekdayLabels="true"
+        labels="Labels"
+        children={<ReactTooltip html />} />
+        </Box>
       </Box>
     </>
   );
