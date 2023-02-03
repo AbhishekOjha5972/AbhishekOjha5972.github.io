@@ -35,8 +35,8 @@ import ContectMe from "../project_images/Components_for_Images/ContectMe";
 import { SiHandshakeProtocol } from "react-icons/si";
 import { AiFillMail } from "react-icons/ai";
 import { BsFillTelephoneFill } from "react-icons/bs";
-import GitHubCalendar from 'react-github-calendar';
-import ReactTooltip from 'react-tooltip';
+import GitHubCalendar from "react-github-calendar";
+import ReactTooltip from "react-tooltip";
 
 import javascript_image from "../project_images/png_images/javascript.png";
 import chakra from "../project_images/png_images/chakra.png";
@@ -393,6 +393,27 @@ const Home = () => {
           </Box>
         </Box>
 
+        {/* Github section  */}
+        <Box color="white" fill="yellow" className="home-github_container_css">
+          <Box>
+            <Text>GitHub</Text>
+            <Text>Updates</Text>
+          </Box>
+          <Box className="home-github_child">
+            <GitHubCalendar
+              username="AbhishekOjha5972"
+              showWeekdayLabels="true"
+              labels="Labels"
+              children={<ReactTooltip html />}
+            />
+          </Box>
+          <Box>
+            <Box>
+            <Image align="center" src="https://camo.githubusercontent.com/4b3757859cc9c8bd443665c742c3307c289739e2704d8bf97d7996614a30be57/68747470733a2f2f6769746875622d726561646d652d73747265616b2d73746174732e6865726f6b756170702e636f6d2f3f757365723d73656a616c373130267468656d653d736561" alt="AbhishekOjha5972" data-canonical-src="https://github-readme-streak-stats.herokuapp.com/?user=AbhishekOjha5972&amp;theme=sea" max-width="100%" />
+            </Box>
+          </Box>
+        </Box>
+
         {/* Contect Me Section  */}
         <Box className="home-contect_me_container_css">
           <Box id="ContactMe" gap="10px">
@@ -516,22 +537,17 @@ const Home = () => {
         </Box>
 
         {/* Go to the top  */}
-        <Link className="home-goto_top"  data-aos="fade-left" href="#home">
-        <div class="loader">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <span><img src="https://media.tenor.com/24-42ZZr3AcAAAAi/emojis-emoji.gif"/></span>
+        <Link className="home-goto_top" data-aos="fade-left" href="#home">
+          <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <span>
+            <img src="https://media.tenor.com/24-42ZZr3AcAAAAi/emojis-emoji.gif" />
+          </span>
         </Link>
-
-        <Box color="white" fill="yellow">
-        <GitHubCalendar username="AbhishekOjha5972"
-        showWeekdayLabels="true"
-        labels="Labels"
-        children={<ReactTooltip html />} />
-        </Box>
       </Box>
     </>
   );

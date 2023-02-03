@@ -294,7 +294,7 @@ body {
 .home-skills_container_css {
   position: relative;
   /* border: 2px solid blue; */
-  height: 100vh;
+  /* height: 100vh; */
 }
 .home-skills_container_css > :nth-child(1) {
   display: flex;
@@ -1307,6 +1307,8 @@ border-radius: 50%;
 }
 
 
+
+
 @keyframes animate {
   0% {
     transform: rotate(0deg);
@@ -1341,6 +1343,33 @@ border-radius: 50%;
   bottom: 10px;
   background: #162434;
   border-radius: 50%;
+}
+
+
+/* GITHUB SECTION  */
+.home-github_container_css{
+  border:3px solid blue;
+  position: relative;
+}
+.home-github_container_css > div:nth-child(1){
+  padding: 80px 0;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+}
+.home-github_container_css >div:nth-child(1) > p:first-child{
+  font-weight: 600;
+  color: rgb(206, 212, 226);
+}
+.home-github_container_css >div:nth-child(1) > p:last-child{
+  color: rgb(103, 77, 137);
+}
+.home-github_child{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
