@@ -24,15 +24,11 @@ const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [trg, setTrg] = useState(false);
 
-  // const nextPage = () =>{
-  //   window.open(`${resume}`)
-  // }
-
   return (
     <Box className="navbar_css">
       <Box>
         <Box>
-          <Text fontSize={["20px", "24px", "26px"]}>Abhishek</Text>
+          <Text  color="rgb(206, 212, 226)" fontSize={["20px", "24px", "26px"]}>Abhishek</Text>
           <Image
             src="https://img.icons8.com/external-xnimrodx-lineal-color-xnimrodx/512/external-coding-advertising-xnimrodx-lineal-color-xnimrodx-2.png"
             w={["20px", "24px", "26px"]}
@@ -57,8 +53,10 @@ const Navbar = () => {
           </Box>
           <Box>
             <Link
-              href="https://drive.google.com/file/d/1zz2eOWRBcKxcl-jF0ZYMlvfUlBw9cxkF/view?usp=share_link"
-              target="_blank"
+              href="https://drive.google.com/u/0/uc?id=1zz2eOWRBcKxcl-jF0ZYMlvfUlBw9cxkF&export=download"
+              onClick={()=>{
+                window.open("https://drive.google.com/file/d/1zz2eOWRBcKxcl-jF0ZYMlvfUlBw9cxkF/view?usp=share_link")
+              }}
             >
               Resume
             </Link>
@@ -74,7 +72,7 @@ const Navbar = () => {
               onOpen();
             }}
           >
-            <GiHamburgerMenu />
+            <GiHamburgerMenu color="rgb(206, 212, 226)"/>
           </Button>
 
           <Drawer onClose={onClose} isOpen={isOpen}>

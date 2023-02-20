@@ -48,6 +48,13 @@ import json from "../project_images/png_images/json.png";
 import react from "../project_images/png_images/react.png";
 import vercel from "../project_images/png_images/triangle.png";
 
+//? Tools imports
+import GitHub from "../project_images/github.png";
+import VSCode from "../project_images/visual_studio_code.png";
+import Git from "../project_images/git.png";
+import Sandbox from "../project_images/code_sandbox.png";
+import CodePen from "../project_images/codepen.png";
+
 let projectsData = [
   {
     title: "Junction Plus",
@@ -56,6 +63,7 @@ let projectsData = [
     deployment: "https://junction-plus.vercel.app/",
     description:
       "This project is completely based on real life use case in which you can see the live updates of movies and tv shows which are currently running in theatres and on tv's",
+      type:"INDIVIDUAL",
     skills: [
       [html, "HTML"],
       [css, "Css"],
@@ -74,6 +82,7 @@ let projectsData = [
     deployment: "https://rentomojoapp.netlify.app/",
     description:
       "In this app you can buy many type of furniture and electronics",
+      type:"INDIVIDUAL",
     skills: [
       [html, "HTML"],
       [css, "Css"],
@@ -88,6 +97,7 @@ let projectsData = [
     deployment: "https://foodium-project.netlify.app/",
     description:
       "This app is made for ordering healthy food. In this app you can order many types of food according to your diet",
+      type:"COLLABORATIVE",
     skills: [
       [html, "HTML"],
       [css, "Css"],
@@ -96,6 +106,14 @@ let projectsData = [
       [json, "JSon"],
     ],
   },
+];
+
+const tools = [
+  { title: "Github", image_url: GitHub },
+  { title: "VS Code", image_url: VSCode },
+  { title: "Git", image_url: Git },
+  { title: "Sandbox", image_url: Sandbox },
+  { title: "CodePen", image_url: CodePen },
 ];
 
 const Home = () => {
@@ -157,9 +175,23 @@ const Home = () => {
               <Text>Welcome</Text>
             </Box>
             <Box>
-              <Text>
-                Nothing ever becomes real 'til it is experienced.― John Keats
-              </Text>
+              <Box>
+                <Text>
+                  Nothing ever becomes real 'til it is experienced.― John Keats
+                </Text>
+              </Box>
+              <Box>
+                <Link
+                  href="https://drive.google.com/u/0/uc?id=1zz2eOWRBcKxcl-jF0ZYMlvfUlBw9cxkF&export=download"
+                  onClick={() => {
+                    window.open(
+                      "https://drive.google.com/file/d/1zz2eOWRBcKxcl-jF0ZYMlvfUlBw9cxkF/view?usp=share_link"
+                    );
+                  }}
+                >
+                  Resume
+                </Link>
+              </Box>
             </Box>
           </Box>
 
@@ -343,6 +375,27 @@ const Home = () => {
           </Box>
         </Box>
 
+        <Box className="home-tools_container_css">
+          <Box>
+            <Text>Platforms</Text>
+            <Text>&</Text>
+            <Text>Tools</Text>
+          </Box>
+          <Box className="home-tools_child_container_css">
+            {tools.map((ele) => {
+              console.log(ele.title)
+              return (
+                <Box>
+                  <Box>
+                    <Image src={ele.image_url} />
+                  </Box>
+                  <Text>{ele.title}</Text>
+                </Box>
+              );
+            })}
+          </Box>
+        </Box>
+
         {/* Project Section  */}
         <Box className="home-projects_container_css" id="projects">
           <Box>
@@ -357,14 +410,17 @@ const Home = () => {
                     <Box style={{ background: `url(${ele.image})` }}>
                       {/* <Image src={ele.image}/> */}
                     </Box>
+                    <Box>
                     <Text>{ele.title}</Text>
+                    <Text>{ele.type}</Text>
+                    </Box>
                     <Flex>
                       <Link href={ele.github} target="_blank">
                         <AiFillGithub />
                         GitHub
                       </Link>
                       <Link href={ele.deployment} target="_blank">
-                        <FaOctopusDeploy /> App
+                        <FaOctopusDeploy /> Live Demo
                       </Link>
                     </Flex>
                     <Box data-aos="fade-down">
@@ -410,8 +466,15 @@ const Home = () => {
           <Box className="home-github_child_two">
             <Box data-aos="fade-right">
               <Image
-              align="center"
-              src="https://github-readme-streak-stats.herokuapp.com?user=AbhishekOjha5972&theme=radical&hide_border=true" />
+                align="center"
+                src="https://github-readme-streak-stats.herokuapp.com?user=AbhishekOjha5972&theme=radical&hide_border=true"
+              />
+            </Box>
+            <Box data-aos="zoom-out">
+              <Image
+                align="center"
+                src="https://github-readme-stats.vercel.app/api/top-langs/?username=AbhishekOjha5972&layout=compact&theme=radical&hide_border=true"
+              />
             </Box>
             <Box data-aos="fade-left">
               <Image
@@ -419,14 +482,6 @@ const Home = () => {
                 src="https://github-readme-stats.vercel.app/api?username=AbhishekOjha5972&theme=radical&show_icons=true&hide_border=true&bg_color=#674d89"
               />
             </Box>
-            <Box data-aos="zoom-out">
-              <Image 
-              height="100%"
-              align="center"
-              src="https://github-readme-stats.vercel.app/api/top-langs/?username=AbhishekOjha5972&layout=compact&theme=radical&hide_border=true"
-              />
-            </Box>
-            
           </Box>
         </Box>
         {/* Contect Me Section  */}

@@ -193,11 +193,30 @@ body {
   color: rgb(103, 77, 137);
 }
 
-.home_css > div:nth-child(1) > div:nth-child(2) > div:last-child {
+.home_css > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) {
   color: rgb(206, 212, 226);
   text-align: center;
   font-size: 14px;
 }
+.home_css > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) {
+  color: rgb(29, 29, 29) ;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.home_css > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > a {
+background-color: rgb(43, 42, 42) !important;
+padding: 10px;
+border-radius: 5px;
+color: rgb(206, 212, 226);
+width: 70%;
+font-size: 16px;
+font-weight: 600;
+text-decoration: none;
+}
+
+
 
 .home-about_me_css {
   /* border: 10px solid blue; */
@@ -788,6 +807,7 @@ SECOND CHILD CSS
   justify-content: space-between;
   gap: 10px;
   display: none;
+  color: rgb(206, 212, 226) !important ;
 }
 
 .home-skills_small_screen > div:nth-child(1) {
@@ -838,12 +858,9 @@ SECOND CHILD CSS
 
 /*? TODO: PROJECT SECTION CSS */
 .home-projects_container_css {
-  /* border: 1px solid blue; */
-  /* height: 100vh; */
   position: relative !important;
 }
 .home-projects_container_css > div:nth-child(1) {
-  /* border: 1px solid yellow; */
   font-size: 35px;
   display: flex;
   justify-content: center;
@@ -879,6 +896,10 @@ SECOND CHILD CSS
 }
 
 .home-projects_container_css > div:nth-child(2) > div {
+  /* border: 50px solid yellow; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   all: initial;
   position: relative;
   height: var(--card-height);
@@ -927,11 +948,23 @@ SECOND CHILD CSS
   background-position: bottom !important;
 }
 
-.home-projects_container_css > div:nth-child(2) > div > div > p:nth-child(2) {
+.home-projects_container_css > div:nth-child(2) > div > div > div:nth-child(2){
+   /* border: 2px solid blue; */
   padding: 10px;
   color: rgb(206, 212, 226);
-  font-weight: 600;
-  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home-projects_container_css > div:nth-child(2) > div > div > div:nth-child(2) > p:nth-child(1){
+  font-size: 25px;
+  font-weight: 700px;
+}
+.home-projects_container_css > div:nth-child(2) > div > div > div:nth-child(2) > p:nth-child(2){
+  padding: 2px 5px;
+  border-radius: 5px;
+  background: linear-gradient(
+    #2b2a2a,#8b7ca8 );
 }
 
 .home-projects_container_css > div:nth-child(2) > div > div > div:nth-child(3) {
@@ -948,9 +981,10 @@ SECOND CHILD CSS
   > div:nth-child(3)
   > a {
   display: flex;
-  justify-content: center;
+  justify-content:center;
+  gap: 10px;
   align-items: center;
-  width: 100px;
+  width: 150px;
   color: rgb(206, 212, 226);
   padding: 10px;
   background-color: rgb(43, 42, 42);
@@ -1377,9 +1411,76 @@ border-radius: 50%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 10px;
-
+  gap: 20px;
 }
+.home-github_child_two > div{
+  width: 400px;
+}
+.home-github_child_two > div > img{
+  height: 100%;
+  width: 100%;
+}
+
+/* TOOLS SECTION  */
+
+.home-tools_container_css > div:nth-child(1){
+  padding: 80px 0;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+}
+.home-tools_container_css >div:nth-child(1) > p:nth-child(1){
+  font-weight: 600;
+  color: rgb(206, 212, 226);
+}
+.home-tools_container_css >div:nth-child(1) > p:nth-child(2){
+/* color: rgb(149, 139, 128); */
+color: #662626
+}
+.home-tools_container_css >div:nth-child(1) > p:nth-child(3){
+  color: rgb(103, 77, 137);
+}
+.home-tools_child_container_css{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.home-tools_child_container_css > div{
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  justify-content: center;
+  flex-direction: column;
+  width: 150px;
+  color:rgb(206, 212, 226);
+  background-color: #2b2a2a;
+  padding: 5px 15px;
+  font-weight: 600;
+  animation: toolsAnimation 3s ease-in-out infinite;
+  transition: all 1.5s ease-in-out;
+}
+.home-tools_child_container_css > div > div{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  color: rgb(206, 212, 226);
+  color: rgb(103, 77, 137);
+  background: radial-gradient(rgb(206, 212, 226),rgb(103, 77, 137));
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.home-tools_child_container_css > div > div > img{
+  width: 48px;
+  height: 48px;
+}
+
 
 
 
@@ -1507,6 +1608,36 @@ border-radius: 50%;
     font-size: 25px;
   }
 
+  .home-github_container_css > div:nth-child(1){
+    padding: 30px 0;
+    font-size: 25px;
+  }
+
+  .home-tools_container_css > div:nth-child(1){
+    padding: 30px 0;
+    font-size: 25px;
+  }
+
+
+  .home-tools_child_container_css{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .home-tools_child_container_css > div{
+    width: 100px;
+    padding: 0px 5px;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 5px 5px;
+  }
+  .home-tools_child_container_css > div > div > img{
+    width: 38px;
+    height: 38px;
+  }
+
 }
 
 @media only screen and (max-width: 900px) {
@@ -1597,6 +1728,19 @@ border-radius: 50%;
       rgb(29, 29, 29) 0px -3px 0px inset;
   }
 }
+
+@keyframes toolsAnimation {
+  0%{
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  }
+  50%{
+    box-shadow: rgba(0, 0, 0, 0.27) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.25) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.21) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.16) 0px 2px 1px, rgba(0, 0, 0, 0.19) 0px 4px 2px, rgba(0, 0, 0, 0.19) 0px 8px 4px, rgba(0, 0, 0, 0.19) 0px 16px 8px, rgba(0, 0, 0, 0.19) 0px 32px 16px;
+  }
+  100%{
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  }
+}
+
 
 @keyframes spin {
   0% {
