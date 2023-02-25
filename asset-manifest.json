@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.1c91f043.css",
-    "main.js": "/static/js/main.a6554fcc.js",
+    "main.js": "/static/js/main.bf520b1e.js",
     "static/js/787.d3befce1.chunk.js": "/static/js/787.d3befce1.chunk.js",
     "static/media/foodium.png": "/static/media/foodium.7f3176b7203d284d5816.png",
     "static/media/junctionplus.png": "/static/media/junctionplus.758c3f90777dc4043b48.png",
+    "static/media/pablo_parking.png": "/static/media/pablo_parking.47cf338f1dd681e22865.png",
     "static/media/rentomojo.png": "/static/media/rentomojo.8576eb991d7734fe547b.png",
     "static/media/profile.jpg": "/static/media/profile.00b117934df16bb1213d.jpg",
     "static/media/Abhishek_Ojha_Resume.pdf": "/static/media/Abhishek_Ojha_Resume.9237dea678655a7d21a9.pdf",
@@ -12,11 +13,11 @@
     "static/media/boy_image.svg": "/static/media/boy_image.d46753c367cc9af5bceca51802f1a444.svg",
     "index.html": "/index.html",
     "main.1c91f043.css.map": "/static/css/main.1c91f043.css.map",
-    "main.a6554fcc.js.map": "/static/js/main.a6554fcc.js.map",
+    "main.bf520b1e.js.map": "/static/js/main.bf520b1e.js.map",
     "787.d3befce1.chunk.js.map": "/static/js/787.d3befce1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1c91f043.css",
-    "static/js/main.a6554fcc.js"
+    "static/js/main.bf520b1e.js"
   ]
 }
