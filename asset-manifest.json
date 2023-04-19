@@ -1,23 +1,26 @@
 {
   "files": {
     "main.css": "/static/css/main.1c91f043.css",
-    "main.js": "/static/js/main.bf520b1e.js",
+    "main.js": "/static/js/main.286de7ca.js",
     "static/js/787.d3befce1.chunk.js": "/static/js/787.d3befce1.chunk.js",
     "static/media/foodium.png": "/static/media/foodium.7f3176b7203d284d5816.png",
     "static/media/junctionplus.png": "/static/media/junctionplus.758c3f90777dc4043b48.png",
+    "static/media/rentish.png": "/static/media/rentish.5f1b3ac150ac2c9d6866.png",
     "static/media/pablo_parking.png": "/static/media/pablo_parking.47cf338f1dd681e22865.png",
+    "static/media/profile_pic.jpg": "/static/media/profile_pic.6aa015712d89cc5a23b8.jpg",
     "static/media/rentomojo.png": "/static/media/rentomojo.8576eb991d7734fe547b.png",
+    "static/media/rock_paper_scissors.png": "/static/media/rock_paper_scissors.2616ef1c7b0591953594.png",
     "static/media/profile.jpg": "/static/media/profile.00b117934df16bb1213d.jpg",
     "static/media/Abhishek_Ojha_Resume.pdf": "/static/media/Abhishek_Ojha_Resume.9237dea678655a7d21a9.pdf",
+    "static/media/kanban.png": "/static/media/kanban.50ec715048ce60a69719.png",
     "static/media/boy_image1.svg": "/static/media/boy_image1.89584920a29185a98a6c511ff5eb43a3.svg",
-    "static/media/boy_image.svg": "/static/media/boy_image.d46753c367cc9af5bceca51802f1a444.svg",
     "index.html": "/index.html",
     "main.1c91f043.css.map": "/static/css/main.1c91f043.css.map",
-    "main.bf520b1e.js.map": "/static/js/main.bf520b1e.js.map",
+    "main.286de7ca.js.map": "/static/js/main.286de7ca.js.map",
     "787.d3befce1.chunk.js.map": "/static/js/787.d3befce1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1c91f043.css",
-    "static/js/main.bf520b1e.js"
+    "static/js/main.286de7ca.js"
   ]
 }
