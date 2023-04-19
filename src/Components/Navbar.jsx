@@ -81,22 +81,28 @@ const Navbar = () => {
               <DrawerCloseButton />
 
               <DrawerBody>
-                <Link href="#" onClick={() => onClose()}>
+                <Link href="#home" onClick={() => onClose()}>
                   <button>Home</button>
                 </Link>
-                <Link href="#" onClick={() => onClose()}>
+                <Link href="#about_me" onClick={() => onClose()}>
                   <button>About</button>
                 </Link>
-                <Link href="#" onClick={() => onClose()}>
+                <Link href="#skills" onClick={() => onClose()}>
                   <button>Skills</button>
                 </Link>
-                <Link href="#" onClick={() => onClose()}>
+                <Link href="#projects" onClick={() => onClose()}>
                   <button>Projects</button>
                 </Link>
-                <Link href="#" onClick={() => onClose()}>
+                <Link
+                 href="https://drive.google.com/u/0/uc?id=1zz2eOWRBcKxcl-jF0ZYMlvfUlBw9cxkF&export=download"
+                 onClick={()=>{
+                   window.open("https://drive.google.com/file/d/1zz2eOWRBcKxcl-jF0ZYMlvfUlBw9cxkF/view?usp=share_link")
+                   onClose()
+                 }}
+                >
                   <button>Resume</button>
                 </Link>
-                <Link href="#" onClick={() => onClose()}>
+                <Link href="#ContactMe" onClick={() => onClose()}>
                   <button>Contact</button>
                 </Link>
               </DrawerBody>

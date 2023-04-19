@@ -17,53 +17,67 @@ import {
   Textarea,
   useToast,
 } from "@chakra-ui/react";
+import rock_paper_scissors from "../project_images/rock_paper_scissors.png"
 import junctionPlus from "..//project_images/junctionplus.png";
+import pabloParking from "../project_images/pablo_parking.png"
 import profile_image from "../project_images/profile.jpg";
 import rentomojo from "..//project_images/rentomojo.png";
 import boy_svg1 from "../project_images/boy_image1.svg";
-import boy_svg from "../project_images/boy_image.svg";
+import rentish from "../project_images/rentish.png";
+import kanban from "../project_images/kanban.png"
 import foodium from "../project_images/foodium.png";
-import skillsData from "../Data/skillsData";
-import { AiFillGithub } from "react-icons/ai";
-import Navbar from "../Components/Navbar";
 import { FaOctopusDeploy } from "react-icons/fa";
+import { AiFillGithub } from "react-icons/ai";
+import skillsData from "../Data/skillsData";
+import Navbar from "../Components/Navbar";
 import { useEffect, useRef } from "react";
-import "aos/dist/aos.css";
-import Aos from "aos";
-import { useForm, ValidationError } from "@formspree/react";
+
 import ContectMe from "../project_images/Components_for_Images/ContectMe";
+import { useForm, ValidationError } from "@formspree/react";
 import { SiHandshakeProtocol } from "react-icons/si";
-import { AiFillMail } from "react-icons/ai";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import GitHubCalendar from "react-github-calendar";
+import { AiFillMail } from "react-icons/ai";
+import { Tooltip } from '@chakra-ui/react'
 import ReactTooltip from "react-tooltip";
+import "aos/dist/aos.css";
+import Aos from "aos";
 
 import javascript_image from "../project_images/png_images/javascript.png";
-import chakra from "../project_images/png_images/chakra.png";
-import html from "../project_images/png_images/html.png";
-import css from "../project_images/png_images/css.png";
 import firebase from "../project_images/png_images/firebase.png";
-import jquery from "../project_images/png_images/jquery.png";
-import json from "../project_images/png_images/json.png";
-import react from "../project_images/png_images/react.png";
 import vercel from "../project_images/png_images/triangle.png";
+import jquery from "../project_images/png_images/jquery.png";
+import chakra from "../project_images/png_images/chakra.png";
+import react from "../project_images/png_images/react.png";
+import html from "../project_images/png_images/html.png";
+import json from "../project_images/png_images/json.png";
+import css from "../project_images/png_images/css.png";
+import mongoDb from "../project_images/png_images/mongoDB.png";
+import redux from "../project_images/png_images/redux.png";
+import nodeJS from "../project_images/png_images/nodejs.png";
+import expressJS from "../project_images/png_images/express.png";
+import socketIO from "../project_images/png_images/socket.png";
+import netlify from "../project_images/png_images/netlify.png"
+import profile_pic  from "../project_images/profile_pic.jpg"
 
 //? Tools imports
-import GitHub from "../project_images/github.png";
 import VSCode from "../project_images/visual_studio_code.png";
-import Git from "../project_images/git.png";
 import Sandbox from "../project_images/code_sandbox.png";
 import CodePen from "../project_images/codepen.png";
+import GitHub from "../project_images/github.png";
+import Git from "../project_images/git.png";
+
+
 
 let projectsData = [
   {
     title: "Junction Plus",
     image: junctionPlus,
     github: "https://github.com/AbhishekOjha5972/childlike-temper-5127",
-    deployment: "https://junction-plus.vercel.app/",
+    deployment: "https://junction-plus-abhishekojha5972.vercel.app/",
     description:
-      "This project is completely based on real life use case in which you can see the live updates of movies and tv shows which are currently running in theatres and on tv's",
-      type:"INDIVIDUAL",
+      "This project is completely based on real life use case in which you can see the live updates of movies and tv shows which are currently running in theatres and on tv's.",
+    type: "OTT WEB APP",
     skills: [
       [html, "HTML"],
       [css, "Css"],
@@ -76,18 +90,78 @@ let projectsData = [
     ],
   },
   {
-    title: "Rentomojo",
-    image: rentomojo,
-    github: "https://github.com/AbhishekOjha5972/-hard-birds-9261",
-    deployment: "https://rentomojoapp.netlify.app/",
+    title: "Legacy Rock Paper Scissors",
+    image: rock_paper_scissors,
+    github: "https://github.com/AbhishekOjha5972/legacy-rock-paper-scissors",
+    deployment: "https://legacy-rock-paper-scissors.netlify.app/",
     description:
-      "In this app you can buy many type of furniture and electronics",
-      type:"INDIVIDUAL",
+      "A multiplayer rock paper scissors game is an online game where multiple players compete against each other by choosing rock, paper, or scissors. The game follows the traditional rules of rock paper scissors, and may include features such as leaderboards.",
+    type: "MULTIPLAYER GAME",
+    skills: [
+      [socketIO, "Socket.io"],
+      [react, "React"],
+      [nodeJS, "Node.js"],
+      [javascript_image, "JavaScript"],
+      [netlify, "Netlify"],
+      [html, "HTML"],
+      [css, "Css"],
+      [chakra, "Chakra"],
+    ],
+  },
+  {
+    title: "Kanban",
+    image: kanban,
+    github: "https://github.com/AbhishekOjha5972/kanban",
+    deployment: "https://kanbanvisualizer.netlify.app/",
+    description:
+      "A Kanban board is a visual tool used to manage and track work in progress (WIP) in a project or process.",
+    type: "WORK FLOW MANAGER",
+    skills: [
+      [react, "React"],
+      [nodeJS, "Node.js"],
+      [mongoDb, "MongoDB"],
+      [redux, "Redux"],
+      [javascript_image, "JavaScript"],
+      [netlify, "Netlify"],
+      [expressJS, "Express.js"],
+      [html, "HTML"],
+      [css, "Css"],
+      [chakra, "Chakra"],
+    ],
+  },
+  {
+    title: "Rentish",
+    image: rentish,
+    github: "https://github.com/AbhishekOjha5972/rentish",
+    deployment: "https://playful-kashata-5541e9.netlify.app/",
+    description:
+      "Rentish is India's largest marketplace for cars on rent. From short road trips to quick in-city drives for groceries, supply pick-up, food runs, we have the cheapest car rental options for all your needs! A hatchback for daily commute, a sedan for short trips, SUV for hills or a luxury car for a surprise.",
+    type: "CAR RENTAL",
+    skills: [
+      [react, "React"],
+      [nodeJS, "Node.js"],
+      [mongoDb, "MongoDB"],
+      [expressJS, "Express.js"],
+      [redux, "Redux"],
+      [javascript_image, "JavaScript"],
+      [netlify, "Netlify"],
+      [html, "HTML"],
+      [css, "Css"],
+      [chakra, "Chakra"],
+    ],
+  },
+  {
+    title: "Pablo Parking",
+    image: pabloParking,
+    github: "https://github.com/Vishwa9011/PabloParking",
+    deployment: "https://pabloparking.netlify.app/",
+    description:
+      "This project bassed on hevicle parking system created based on LLD (Low Level Designing) concept. Here you can book a slot to park vehicle",
+    type: "PARKING WEB APP",
     skills: [
       [html, "HTML"],
       [css, "Css"],
-      [javascript_image, "JavaScript"],
-      [jquery, "JQuery"],
+      [javascript_image, "JavaScript"]
     ],
   },
   {
@@ -96,8 +170,8 @@ let projectsData = [
     github: "https://github.com/AbhishekOjha5972/zonked-hall-6274",
     deployment: "https://foodium-project.netlify.app/",
     description:
-      "This app is made for ordering healthy food. In this app you can order many types of food according to your diet",
-      type:"COLLABORATIVE",
+      "Foodium is a meal delivery service that offers an array of chef-cooked, ready-to-eat meals with a special focus on healthy, balanced eating. The service's menu consists of a broad range of single-serve dishes, including low-carb, high-protein options to fit gluten-free, dairy-free, keto, and paleo diets",
+    type: "FOOD SERVICE",
     skills: [
       [html, "HTML"],
       [css, "Css"],
@@ -106,6 +180,21 @@ let projectsData = [
       [json, "JSon"],
     ],
   },
+  {
+    title: "Rentomojo",
+    image: rentomojo,
+    github: "https://github.com/AbhishekOjha5972/-hard-birds-9261",
+    deployment: "https://rentomojoapp.netlify.app/",
+    description:
+      "Rentomojo is used to provide rental services which contain electronics and furniture items, And it also provide some packeges which contain complete house appliances",
+    type: "RENTAL SERVICE",
+    skills: [
+      [html, "HTML"],
+      [css, "Css"],
+      [javascript_image, "JavaScript"],
+      [jquery, "JQuery"],
+    ],
+  }
 ];
 
 const tools = [
@@ -209,18 +298,20 @@ const Home = () => {
           <Box>
             <Box data-aos="zoom-out-right" data-aos-duration="1000">
               <Text>
-                A self-taught passionate Full Stack web developer including with
+                {/* A self-taught passionate Full Stack web developer including with
                 1300+ hours of coding experience, who cares about the code and
                 the people, A quick learner who can absorb new ideas and can
                 communicate clearly and effectively. Capable of writing
                 production- ready code using React.js, Redux.js, and CSS on the
                 Front-end, and Node.js and Express.js on the Backend to build
-                single-page applications.
+                single-page applications. */}
+                As a Full Stack Developer, I have 1200+ hours of coding experience and have solved over 700 DSA questions. My front-end development skills include React, Next.js, Redux, Chakra UI, JavaScript, and TypeScript. On the back-end, I am proficient in Node.js, Express.js, and WebSockets. I have experience working with databases such as MongoDB and Firebase. With my expertise in these technologies, I am capable of designing and developing complex web applications from start to finish
               </Text>
             </Box>
             <Box data-aos="zoom-out-left" data-aos-duration="1000">
               <Box>
-                <Image src={profile_image} />
+                {/* <Image src={profile_image} /> */}
+                <Image src={profile_pic} />
               </Box>
               <Box
                 data-aos="fade-down"
@@ -411,8 +502,8 @@ const Home = () => {
                       {/* <Image src={ele.image}/> */}
                     </Box>
                     <Box>
-                    <Text>{ele.title}</Text>
-                    <Text>{ele.type}</Text>
+                      <Text>{ele.title}</Text>
+                      <Text>{ele.type}</Text>
                     </Box>
                     <Flex>
                       <Link href={ele.github} target="_blank">
@@ -429,7 +520,7 @@ const Home = () => {
                         <Box>
                           {ele.skills.map((item, ind) => {
                             return (
-                              <Box key={ind}>
+                              <Box key={ind} >
                                 <Image w="20px" h="20px" src={item[0]} />
                                 <Text>{item[1]}</Text>
                               </Box>
@@ -439,7 +530,9 @@ const Home = () => {
                       </Box>
                       <Box>
                         <Button>Description</Button>
-                        <Box>{ele.description}</Box>
+                        <Box fontSize="18px">
+                          <Tooltip borderRadius="5px" label="For read the whole description please SCROLL UP.">{ele.description}</Tooltip>
+                        </Box>
                       </Box>
                     </Box>
                   </Box>
@@ -589,18 +682,18 @@ const Home = () => {
               </li>
               <li>
                 <a
-                  href="https://myaccount.google.com/u/1/profile?pageId=none"
-                  target="_blank"
-                >
-                  <i class="fab fa-google-plus-g" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li>
-                <a
                   href="https://www.linkedin.com/in/abhishek-ojha-03794b1aa/"
                   target="_blank"
                 >
                   <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://myaccount.google.com/u/1/profile?pageId=none"
+                  target="_blank"
+                >
+                  <i class="fab fa-google-plus-g" aria-hidden="true"></i>
                 </a>
               </li>
             </ul>
