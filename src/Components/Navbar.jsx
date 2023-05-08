@@ -53,9 +53,9 @@ const Navbar = () => {
           </Box>
           <Box>
             <Link
-              href="https://drive.google.com/u/0/uc?id=1zz2eOWRBcKxcl-jF0ZYMlvfUlBw9cxkF&export=download"
+              href="https://drive.google.com/u/0/uc?id=1q-Wpu-1zLjiCrzHVyGUecZxRRpBFUccA&export=download"
               onClick={()=>{
-                window.open("https://drive.google.com/file/d/1zz2eOWRBcKxcl-jF0ZYMlvfUlBw9cxkF/view?usp=share_link")
+                window.open("https://drive.google.com/file/d/1q-Wpu-1zLjiCrzHVyGUecZxRRpBFUccA/view?usp=share_link")
               }}
             >
               Resume
@@ -94,9 +94,9 @@ const Navbar = () => {
                   <button>Projects</button>
                 </Link>
                 <Link
-                 href="https://drive.google.com/u/0/uc?id=1zz2eOWRBcKxcl-jF0ZYMlvfUlBw9cxkF&export=download"
+                 href="https://drive.google.com/u/0/uc?id=1q-Wpu-1zLjiCrzHVyGUecZxRRpBFUccA&export=download"
                  onClick={()=>{
-                   window.open("https://drive.google.com/file/d/1zz2eOWRBcKxcl-jF0ZYMlvfUlBw9cxkF/view?usp=share_link")
+                   window.open("https://drive.google.com/file/d/1q-Wpu-1zLjiCrzHVyGUecZxRRpBFUccA/view?usp=share_link")
                    onClose()
                  }}
                 >
