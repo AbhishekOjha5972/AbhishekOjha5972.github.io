@@ -28,7 +28,7 @@ const Navbar = () => {
     <Box className="navbar_css">
       <Box>
         <Box>
-          <Text  color="rgb(206, 212, 226)" fontSize={["20px", "24px", "26px"]}>Abhishek</Text>
+          <Text color="rgb(206, 212, 226)" fontSize={["20px", "24px", "26px"]}>Abhishek</Text>
           <Image
             src="https://img.icons8.com/external-xnimrodx-lineal-color-xnimrodx/512/external-coding-advertising-xnimrodx-lineal-color-xnimrodx-2.png"
             w={["20px", "24px", "26px"]}
@@ -53,9 +53,11 @@ const Navbar = () => {
           </Box>
           <Box>
             <Link
-              href="https://drive.google.com/u/0/uc?id=1q-Wpu-1zLjiCrzHVyGUecZxRRpBFUccA&export=download"
-              onClick={()=>{
-                window.open("https://drive.google.com/file/d/1q-Wpu-1zLjiCrzHVyGUecZxRRpBFUccA/view?usp=share_link")
+              // href="https://drive.google.com/u/0/uc?id=1q-Wpu-1zLjiCrzHVyGUecZxRRpBFUccA&export=download"
+              href="https://drive.google.com/u/0/uc?id=1OfPZJ9dyqO6CVVPIgTTsaORiQvHFG0UW&export=download"
+              onClick={() => {
+                window.open("https://drive.google.com/file/d/1OfPZJ9dyqO6CVVPIgTTsaORiQvHFG0UW/view?usp=share_link")
+                // window.open("https://drive.google.com/file/d/1q-Wpu-1zLjiCrzHVyGUecZxRRpBFUccA/view?usp=share_link")
               }}
             >
               Resume
@@ -72,7 +74,7 @@ const Navbar = () => {
               onOpen();
             }}
           >
-            <GiHamburgerMenu color="rgb(206, 212, 226)"/>
+            <GiHamburgerMenu color="rgb(206, 212, 226)" />
           </Button>
 
           <Drawer onClose={onClose} isOpen={isOpen}>
@@ -94,11 +96,11 @@ const Navbar = () => {
                   <button>Projects</button>
                 </Link>
                 <Link
-                 href="https://drive.google.com/u/0/uc?id=1q-Wpu-1zLjiCrzHVyGUecZxRRpBFUccA&export=download"
-                 onClick={()=>{
-                   window.open("https://drive.google.com/file/d/1q-Wpu-1zLjiCrzHVyGUecZxRRpBFUccA/view?usp=share_link")
-                   onClose()
-                 }}
+                  href="https://drive.google.com/u/0/uc?id=1q-Wpu-1zLjiCrzHVyGUecZxRRpBFUccA&export=download"
+                  onClick={() => {
+                    window.open("https://drive.google.com/file/d/1q-Wpu-1zLjiCrzHVyGUecZxRRpBFUccA/view?usp=share_link")
+                    onClose()
+                  }}
                 >
                   <button>Resume</button>
                 </Link>

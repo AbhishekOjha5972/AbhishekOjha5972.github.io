@@ -271,11 +271,13 @@ const Home = () => {
               </Box>
               <Box>
                 <Link
-                  href="https://drive.google.com/u/0/uc?id=1q-Wpu-1zLjiCrzHVyGUecZxRRpBFUccA&export=download"
+                  href="https://drive.google.com/u/0/uc?id=1OfPZJ9dyqO6CVVPIgTTsaORiQvHFG0UW&export=download"
+                  // https://drive.google.com/file/d/1OfPZJ9dyqO6CVVPIgTTsaORiQvHFG0UW/view?usp=sharing
+                  // https://drive.google.com/file/d/1OfPZJ9dyqO6CVVPIgTTsaORiQvHFG0UW/view?usp=sharing
                   onClick={() => {
                     window.open(
                       // "https://drive.google.com/file/d/1zz2eOWRBcKxcl-jF0ZYMlvfUlBw9cxkF/view?usp=share_link"
-                      "https://drive.google.com/file/d/1q-Wpu-1zLjiCrzHVyGUecZxRRpBFUccA/view?usp=share_link"
+                      "https://drive.google.com/file/d/1OfPZJ9dyqO6CVVPIgTTsaORiQvHFG0UW/view?usp=share_link"
                     );
                   }}
                 >
